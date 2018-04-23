@@ -1,0 +1,574 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		2F4605B6208E4CD80038B755 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F4605B5208E4CD80038B755 /* AppDelegate.swift */; };
+		2F4605B8208E4CD80038B755 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F4605B7208E4CD80038B755 /* ViewController.swift */; };
+		2F4605BB208E4CD80038B755 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2F4605B9208E4CD80038B755 /* Main.storyboard */; };
+		2F4605BE208E4CD80038B755 /* WasteRecon.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2F4605BC208E4CD80038B755 /* WasteRecon.xcdatamodeld */; };
+		2F4605C0208E4CD80038B755 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2F4605BF208E4CD80038B755 /* Assets.xcassets */; };
+		2F4605C3208E4CD80038B755 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2F4605C1208E4CD80038B755 /* LaunchScreen.storyboard */; };
+		2F4605CE208E4CD80038B755 /* WasteReconTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F4605CD208E4CD80038B755 /* WasteReconTests.swift */; };
+		2F4605D9208E4CD80038B755 /* WasteReconUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F4605D8208E4CD80038B755 /* WasteReconUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		2F4605CA208E4CD80038B755 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2F4605AA208E4CD80038B755 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2F4605B1208E4CD80038B755;
+			remoteInfo = WasteRecon;
+		};
+		2F4605D5208E4CD80038B755 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2F4605AA208E4CD80038B755 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2F4605B1208E4CD80038B755;
+			remoteInfo = WasteRecon;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		2F4605B2208E4CD80038B755 /* WasteRecon.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WasteRecon.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		2F4605B5208E4CD80038B755 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		2F4605B7208E4CD80038B755 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		2F4605BA208E4CD80038B755 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		2F4605BD208E4CD80038B755 /* WasteRecon.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = WasteRecon.xcdatamodel; sourceTree = "<group>"; };
+		2F4605BF208E4CD80038B755 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		2F4605C2208E4CD80038B755 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		2F4605C4208E4CD80038B755 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2F4605C9208E4CD80038B755 /* WasteReconTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WasteReconTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		2F4605CD208E4CD80038B755 /* WasteReconTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WasteReconTests.swift; sourceTree = "<group>"; };
+		2F4605CF208E4CD80038B755 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2F4605D4208E4CD80038B755 /* WasteReconUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WasteReconUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		2F4605D8208E4CD80038B755 /* WasteReconUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WasteReconUITests.swift; sourceTree = "<group>"; };
+		2F4605DA208E4CD80038B755 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		2F4605AF208E4CD80038B755 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2F4605C6208E4CD80038B755 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2F4605D1208E4CD80038B755 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		2F4605A9208E4CD80038B755 = {
+			isa = PBXGroup;
+			children = (
+				2F4605B4208E4CD80038B755 /* WasteRecon */,
+				2F4605CC208E4CD80038B755 /* WasteReconTests */,
+				2F4605D7208E4CD80038B755 /* WasteReconUITests */,
+				2F4605B3208E4CD80038B755 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		2F4605B3208E4CD80038B755 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				2F4605B2208E4CD80038B755 /* WasteRecon.app */,
+				2F4605C9208E4CD80038B755 /* WasteReconTests.xctest */,
+				2F4605D4208E4CD80038B755 /* WasteReconUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		2F4605B4208E4CD80038B755 /* WasteRecon */ = {
+			isa = PBXGroup;
+			children = (
+				2F4605B5208E4CD80038B755 /* AppDelegate.swift */,
+				2F4605B7208E4CD80038B755 /* ViewController.swift */,
+				2F4605B9208E4CD80038B755 /* Main.storyboard */,
+				2F4605BF208E4CD80038B755 /* Assets.xcassets */,
+				2F4605C1208E4CD80038B755 /* LaunchScreen.storyboard */,
+				2F4605C4208E4CD80038B755 /* Info.plist */,
+				2F4605BC208E4CD80038B755 /* WasteRecon.xcdatamodeld */,
+			);
+			path = WasteRecon;
+			sourceTree = "<group>";
+		};
+		2F4605CC208E4CD80038B755 /* WasteReconTests */ = {
+			isa = PBXGroup;
+			children = (
+				2F4605CD208E4CD80038B755 /* WasteReconTests.swift */,
+				2F4605CF208E4CD80038B755 /* Info.plist */,
+			);
+			path = WasteReconTests;
+			sourceTree = "<group>";
+		};
+		2F4605D7208E4CD80038B755 /* WasteReconUITests */ = {
+			isa = PBXGroup;
+			children = (
+				2F4605D8208E4CD80038B755 /* WasteReconUITests.swift */,
+				2F4605DA208E4CD80038B755 /* Info.plist */,
+			);
+			path = WasteReconUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		2F4605B1208E4CD80038B755 /* WasteRecon */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2F4605DD208E4CD80038B755 /* Build configuration list for PBXNativeTarget "WasteRecon" */;
+			buildPhases = (
+				2F4605AE208E4CD80038B755 /* Sources */,
+				2F4605AF208E4CD80038B755 /* Frameworks */,
+				2F4605B0208E4CD80038B755 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = WasteRecon;
+			productName = WasteRecon;
+			productReference = 2F4605B2208E4CD80038B755 /* WasteRecon.app */;
+			productType = "com.apple.product-type.application";
+		};
+		2F4605C8208E4CD80038B755 /* WasteReconTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2F4605E0208E4CD80038B755 /* Build configuration list for PBXNativeTarget "WasteReconTests" */;
+			buildPhases = (
+				2F4605C5208E4CD80038B755 /* Sources */,
+				2F4605C6208E4CD80038B755 /* Frameworks */,
+				2F4605C7208E4CD80038B755 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				2F4605CB208E4CD80038B755 /* PBXTargetDependency */,
+			);
+			name = WasteReconTests;
+			productName = WasteReconTests;
+			productReference = 2F4605C9208E4CD80038B755 /* WasteReconTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		2F4605D3208E4CD80038B755 /* WasteReconUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2F4605E3208E4CD80038B755 /* Build configuration list for PBXNativeTarget "WasteReconUITests" */;
+			buildPhases = (
+				2F4605D0208E4CD80038B755 /* Sources */,
+				2F4605D1208E4CD80038B755 /* Frameworks */,
+				2F4605D2208E4CD80038B755 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				2F4605D6208E4CD80038B755 /* PBXTargetDependency */,
+			);
+			name = WasteReconUITests;
+			productName = WasteReconUITests;
+			productReference = 2F4605D4208E4CD80038B755 /* WasteReconUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		2F4605AA208E4CD80038B755 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0920;
+				LastUpgradeCheck = 0920;
+				ORGANIZATIONNAME = WasteRecon;
+				TargetAttributes = {
+					2F4605B1208E4CD80038B755 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+					};
+					2F4605C8208E4CD80038B755 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 2F4605B1208E4CD80038B755;
+					};
+					2F4605D3208E4CD80038B755 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 2F4605B1208E4CD80038B755;
+					};
+				};
+			};
+			buildConfigurationList = 2F4605AD208E4CD80038B755 /* Build configuration list for PBXProject "WasteRecon" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 2F4605A9208E4CD80038B755;
+			productRefGroup = 2F4605B3208E4CD80038B755 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				2F4605B1208E4CD80038B755 /* WasteRecon */,
+				2F4605C8208E4CD80038B755 /* WasteReconTests */,
+				2F4605D3208E4CD80038B755 /* WasteReconUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		2F4605B0208E4CD80038B755 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2F4605C3208E4CD80038B755 /* LaunchScreen.storyboard in Resources */,
+				2F4605C0208E4CD80038B755 /* Assets.xcassets in Resources */,
+				2F4605BB208E4CD80038B755 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2F4605C7208E4CD80038B755 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2F4605D2208E4CD80038B755 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		2F4605AE208E4CD80038B755 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2F4605BE208E4CD80038B755 /* WasteRecon.xcdatamodeld in Sources */,
+				2F4605B8208E4CD80038B755 /* ViewController.swift in Sources */,
+				2F4605B6208E4CD80038B755 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2F4605C5208E4CD80038B755 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2F4605CE208E4CD80038B755 /* WasteReconTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2F4605D0208E4CD80038B755 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2F4605D9208E4CD80038B755 /* WasteReconUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		2F4605CB208E4CD80038B755 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2F4605B1208E4CD80038B755 /* WasteRecon */;
+			targetProxy = 2F4605CA208E4CD80038B755 /* PBXContainerItemProxy */;
+		};
+		2F4605D6208E4CD80038B755 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2F4605B1208E4CD80038B755 /* WasteRecon */;
+			targetProxy = 2F4605D5208E4CD80038B755 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		2F4605B9208E4CD80038B755 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2F4605BA208E4CD80038B755 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		2F4605C1208E4CD80038B755 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2F4605C2208E4CD80038B755 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		2F4605DB208E4CD80038B755 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		2F4605DC208E4CD80038B755 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		2F4605DE208E4CD80038B755 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = WasteRecon/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.WasteRecon;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		2F4605DF208E4CD80038B755 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = WasteRecon/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.WasteRecon;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		2F4605E1208E4CD80038B755 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = WasteReconTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.WasteReconTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/WasteRecon.app/WasteRecon";
+			};
+			name = Debug;
+		};
+		2F4605E2208E4CD80038B755 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = WasteReconTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.WasteReconTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/WasteRecon.app/WasteRecon";
+			};
+			name = Release;
+		};
+		2F4605E4208E4CD80038B755 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = WasteReconUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.WasteReconUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = WasteRecon;
+			};
+			name = Debug;
+		};
+		2F4605E5208E4CD80038B755 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = WasteReconUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.WasteReconUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = WasteRecon;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2F4605AD208E4CD80038B755 /* Build configuration list for PBXProject "WasteRecon" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2F4605DB208E4CD80038B755 /* Debug */,
+				2F4605DC208E4CD80038B755 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2F4605DD208E4CD80038B755 /* Build configuration list for PBXNativeTarget "WasteRecon" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2F4605DE208E4CD80038B755 /* Debug */,
+				2F4605DF208E4CD80038B755 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2F4605E0208E4CD80038B755 /* Build configuration list for PBXNativeTarget "WasteReconTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2F4605E1208E4CD80038B755 /* Debug */,
+				2F4605E2208E4CD80038B755 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2F4605E3208E4CD80038B755 /* Build configuration list for PBXNativeTarget "WasteReconUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2F4605E4208E4CD80038B755 /* Debug */,
+				2F4605E5208E4CD80038B755 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		2F4605BC208E4CD80038B755 /* WasteRecon.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				2F4605BD208E4CD80038B755 /* WasteRecon.xcdatamodel */,
+			);
+			currentVersion = 2F4605BD208E4CD80038B755 /* WasteRecon.xcdatamodel */;
+			path = WasteRecon.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 2F4605AA208E4CD80038B755 /* Project object */;
+}
