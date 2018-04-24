@@ -27,6 +27,12 @@ class Image {
         self.img = Image.convertBase64ToImage(imgString: imgInBase64)
     }
     
+    init?(catName: String, imgInBase64: String, name: String){
+        self.catName = catName
+        self.name = name
+        self.img = Image.convertBase64ToImage(imgString: imgInBase64)
+    }
+    
     //MARK: Private Methods
     //Convert String to Base64
     static func convertImageToBase64(img: UIImage) -> String {

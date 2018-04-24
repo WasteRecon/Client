@@ -20,6 +20,7 @@
 		2F4605EF208F30E00038B755 /* Observer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F4605EE208F30E00038B755 /* Observer.swift */; };
 		2F4605F1208F314D0038B755 /* Observable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F4605F0208F314D0038B755 /* Observable.swift */; };
 		2F4605F3208F31EC0038B755 /* CategoryServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F4605F2208F31EC0038B755 /* CategoryServices.swift */; };
+		2F4605F5208F39E40038B755 /* ImageServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F4605F4208F39E40038B755 /* ImageServices.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +60,7 @@
 		2F4605EE208F30E00038B755 /* Observer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Observer.swift; sourceTree = "<group>"; };
 		2F4605F0208F314D0038B755 /* Observable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Observable.swift; sourceTree = "<group>"; };
 		2F4605F2208F31EC0038B755 /* CategoryServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryServices.swift; sourceTree = "<group>"; };
+		2F4605F4208F39E40038B755 /* ImageServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageServices.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -153,6 +155,7 @@
 			isa = PBXGroup;
 			children = (
 				2F4605F2208F31EC0038B755 /* CategoryServices.swift */,
+				2F4605F4208F39E40038B755 /* ImageServices.swift */,
 			);
 			path = Webservices;
 			sourceTree = "<group>";
@@ -311,6 +314,7 @@
 			files = (
 				2F4605BE208E4CD80038B755 /* WasteRecon.xcdatamodeld in Sources */,
 				2F4605EF208F30E00038B755 /* Observer.swift in Sources */,
+				2F4605F5208F39E40038B755 /* ImageServices.swift in Sources */,
 				2F4605B8208E4CD80038B755 /* NewImageViewController.swift in Sources */,
 				2F4605F3208F31EC0038B755 /* CategoryServices.swift in Sources */,
 				2F4605F1208F314D0038B755 /* Observable.swift in Sources */,
