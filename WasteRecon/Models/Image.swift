@@ -18,6 +18,7 @@ class Image {
     init(catName: String, imgInBase64: String){
         self.catName = catName
         
+        //Set current timestamp as name
         let date = Date()
         let formatter = DateFormatter()
         formatter.dateFormat = "dd.MM.yyyy HH:mm:ss"
