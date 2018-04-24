@@ -66,10 +66,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
-                    <navigationItem key="navigationItem" title="New Image" largeTitleDisplayMode="always" id="UpD-p7-qrE">
-                        <barButtonItem key="leftBarButtonItem" title="Item" id="zwb-9d-XcG"/>
-                        <barButtonItem key="rightBarButtonItem" title="Item" id="NQo-0g-68K"/>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" title="New Image" largeTitleDisplayMode="always" id="UpD-p7-qrE"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
                 <tapGestureRecognizer id="TER-fe-DtN"/>
@@ -80,17 +77,37 @@
         <scene sceneID="oAU-hX-Aqo">
             <objects>
                 <tableViewController id="Ko1-RU-FoX" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="LRN-XC-Lpe">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="90" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="LRN-XC-Lpe">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="GO9-0y-xWK">
-                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="90" id="GO9-0y-xWK">
+                                <rect key="frame" x="0.0" y="28" width="375" height="90"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="GO9-0y-xWK" id="BCd-U2-lXP">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="89.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Image" translatesAutoresizingMaskIntoConstraints="NO" id="iJB-Fc-3N4">
+                                            <rect key="frame" x="0.0" y="0.0" width="90" height="90"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="catName" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K73-Ic-NvN">
+                                            <rect key="frame" x="98" y="11" width="261" height="21"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="catDescription" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EjT-ql-WT9">
+                                            <rect key="frame" x="98" y="58" width="261" height="21"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
                                 </tableViewCellContentView>
                             </tableViewCell>
                         </prototypes>
@@ -99,11 +116,13 @@
                             <outlet property="delegate" destination="Ko1-RU-FoX" id="0LN-cr-uuK"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Categories" id="lXK-i3-WLx"/>
+                    <navigationItem key="navigationItem" title="Categories" id="lXK-i3-WLx">
+                        <barButtonItem key="rightBarButtonItem" id="Drr-xq-7pt"/>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FET-0t-cX7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2140" y="733"/>
+            <point key="canvasLocation" x="2140" y="732.68365817091455"/>
         </scene>
         <!--Images-->
         <scene sceneID="HZg-0C-xQw">
@@ -159,13 +178,13 @@
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6l6-GE-gL0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-135" y="878"/>
+            <point key="canvasLocation" x="249" y="902"/>
         </scene>
-        <!--Item-->
+        <!--New Image-->
         <scene sceneID="dp2-e3-ZUn">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="TXW-ZJ-2GB" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="wtQ-PW-QeT"/>
+                    <tabBarItem key="tabBarItem" title="New Image" id="wtQ-PW-QeT"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="i0c-0b-4pJ">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
@@ -180,11 +199,11 @@
             </objects>
             <point key="canvasLocation" x="1233" y="21"/>
         </scene>
-        <!--Item-->
+        <!--Categories-->
         <scene sceneID="GcJ-2R-DWs">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="GtZ-E0-ka2" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="aSF-ki-7ng"/>
+                    <tabBarItem key="tabBarItem" title="Categories" id="aSF-ki-7ng"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="zSp-6q-2n8">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
@@ -199,11 +218,11 @@
             </objects>
             <point key="canvasLocation" x="1233" y="733"/>
         </scene>
-        <!--Item-->
+        <!--Images-->
         <scene sceneID="EQS-G0-pdB">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="2A2-5d-ZAb" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="x0W-oB-O6n"/>
+                    <tabBarItem key="tabBarItem" title="Images" id="x0W-oB-O6n"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="bR9-04-3ty">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
