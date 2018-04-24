@@ -14,7 +14,7 @@
         <!--New Image-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="WasteRecon" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="NewImageViewController" customModule="WasteRecon" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -123,6 +123,22 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FET-0t-cX7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2140" y="732.68365817091455"/>
+        </scene>
+        <!--Category-->
+        <scene sceneID="I2g-IP-r2J">
+            <objects>
+                <viewController id="hfb-PM-fWn" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="avA-6n-NH5">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <viewLayoutGuide key="safeArea" id="w5v-lX-gpk"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Category" id="TPH-2K-QOQ"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6n6-eF-8sO" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4249" y="1449"/>
         </scene>
         <!--Images-->
         <scene sceneID="HZg-0C-xQw">
@@ -236,6 +252,24 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2lr-2H-ouc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1233" y="1449"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="qiu-jo-SdA">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="b6e-9y-WRO" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="LmZ-zj-ZLw">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="hfb-PM-fWn" kind="relationship" relationship="rootViewController" id="fEG-4P-oPU"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HvF-FS-V1e" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3338" y="1449"/>
         </scene>
     </scenes>
     <resources>

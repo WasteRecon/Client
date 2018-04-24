@@ -8,13 +8,18 @@
 
 /* Begin PBXBuildFile section */
 		2F4605B6208E4CD80038B755 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F4605B5208E4CD80038B755 /* AppDelegate.swift */; };
-		2F4605B8208E4CD80038B755 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F4605B7208E4CD80038B755 /* ViewController.swift */; };
+		2F4605B8208E4CD80038B755 /* NewImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F4605B7208E4CD80038B755 /* NewImageViewController.swift */; };
 		2F4605BB208E4CD80038B755 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2F4605B9208E4CD80038B755 /* Main.storyboard */; };
 		2F4605BE208E4CD80038B755 /* WasteRecon.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2F4605BC208E4CD80038B755 /* WasteRecon.xcdatamodeld */; };
 		2F4605C0208E4CD80038B755 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2F4605BF208E4CD80038B755 /* Assets.xcassets */; };
 		2F4605C3208E4CD80038B755 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2F4605C1208E4CD80038B755 /* LaunchScreen.storyboard */; };
 		2F4605CE208E4CD80038B755 /* WasteReconTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F4605CD208E4CD80038B755 /* WasteReconTests.swift */; };
 		2F4605D9208E4CD80038B755 /* WasteReconUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F4605D8208E4CD80038B755 /* WasteReconUITests.swift */; };
+		2F4605EA208F275E0038B755 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F4605E9208F275E0038B755 /* Category.swift */; };
+		2F4605ED208F2B270038B755 /* Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F4605EC208F2B270038B755 /* Image.swift */; };
+		2F4605EF208F30E00038B755 /* Observer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F4605EE208F30E00038B755 /* Observer.swift */; };
+		2F4605F1208F314D0038B755 /* Observable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F4605F0208F314D0038B755 /* Observable.swift */; };
+		2F4605F3208F31EC0038B755 /* CategoryServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F4605F2208F31EC0038B755 /* CategoryServices.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,7 +42,7 @@
 /* Begin PBXFileReference section */
 		2F4605B2208E4CD80038B755 /* WasteRecon.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WasteRecon.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2F4605B5208E4CD80038B755 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		2F4605B7208E4CD80038B755 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		2F4605B7208E4CD80038B755 /* NewImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewImageViewController.swift; sourceTree = "<group>"; };
 		2F4605BA208E4CD80038B755 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		2F4605BD208E4CD80038B755 /* WasteRecon.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = WasteRecon.xcdatamodel; sourceTree = "<group>"; };
 		2F4605BF208E4CD80038B755 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -49,6 +54,11 @@
 		2F4605D4208E4CD80038B755 /* WasteReconUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WasteReconUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2F4605D8208E4CD80038B755 /* WasteReconUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WasteReconUITests.swift; sourceTree = "<group>"; };
 		2F4605DA208E4CD80038B755 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2F4605E9208F275E0038B755 /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
+		2F4605EC208F2B270038B755 /* Image.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Image.swift; sourceTree = "<group>"; };
+		2F4605EE208F30E00038B755 /* Observer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Observer.swift; sourceTree = "<group>"; };
+		2F4605F0208F314D0038B755 /* Observable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Observable.swift; sourceTree = "<group>"; };
+		2F4605F2208F31EC0038B755 /* CategoryServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryServices.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,8 +109,11 @@
 		2F4605B4208E4CD80038B755 /* WasteRecon */ = {
 			isa = PBXGroup;
 			children = (
+				2F4605EB208F276B0038B755 /* Protocols */,
+				2F4605E8208F26520038B755 /* Models */,
+				2F4605E7208F26450038B755 /* Webservices */,
+				2F4605E6208F26370038B755 /* Controllers */,
 				2F4605B5208E4CD80038B755 /* AppDelegate.swift */,
-				2F4605B7208E4CD80038B755 /* ViewController.swift */,
 				2F4605B9208E4CD80038B755 /* Main.storyboard */,
 				2F4605BF208E4CD80038B755 /* Assets.xcassets */,
 				2F4605C1208E4CD80038B755 /* LaunchScreen.storyboard */,
@@ -126,6 +139,40 @@
 				2F4605DA208E4CD80038B755 /* Info.plist */,
 			);
 			path = WasteReconUITests;
+			sourceTree = "<group>";
+		};
+		2F4605E6208F26370038B755 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				2F4605B7208E4CD80038B755 /* NewImageViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		2F4605E7208F26450038B755 /* Webservices */ = {
+			isa = PBXGroup;
+			children = (
+				2F4605F2208F31EC0038B755 /* CategoryServices.swift */,
+			);
+			path = Webservices;
+			sourceTree = "<group>";
+		};
+		2F4605E8208F26520038B755 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				2F4605E9208F275E0038B755 /* Category.swift */,
+				2F4605EC208F2B270038B755 /* Image.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		2F4605EB208F276B0038B755 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				2F4605EE208F30E00038B755 /* Observer.swift */,
+				2F4605F0208F314D0038B755 /* Observable.swift */,
+			);
+			path = Protocols;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -263,8 +310,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				2F4605BE208E4CD80038B755 /* WasteRecon.xcdatamodeld in Sources */,
-				2F4605B8208E4CD80038B755 /* ViewController.swift in Sources */,
+				2F4605EF208F30E00038B755 /* Observer.swift in Sources */,
+				2F4605B8208E4CD80038B755 /* NewImageViewController.swift in Sources */,
+				2F4605F3208F31EC0038B755 /* CategoryServices.swift in Sources */,
+				2F4605F1208F314D0038B755 /* Observable.swift in Sources */,
 				2F4605B6208E4CD80038B755 /* AppDelegate.swift in Sources */,
+				2F4605EA208F275E0038B755 /* Category.swift in Sources */,
+				2F4605ED208F2B270038B755 /* Image.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
