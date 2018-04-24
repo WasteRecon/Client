@@ -41,6 +41,33 @@ class CategoryServices: Observable {
         task.resume()
     }
     
+    //MARK: Get category by catName
+    func getCategoryByName(catName: String){
+        guard let url = URL(string: (apiUrl + "/categories/" + catName)) else {
+            fatalError("Failed to create GET category by Name URL error")
+        }
+        
+        let task = URLSession.shared.dataTask(with: url){data, response, error in
+            if let error = error {
+                print("Client error: \(error)")
+            }
+            
+            guard let httpResponse = response as? HTTPURLResponse, (200...299).contains(httpResponse.statusCode) else {
+                print("Server error: Failed to GET category by name")
+                return
+            }
+            
+            if let data = data {
+                self.parseCategory(jsonFile: data)
+                DispatchQueue.main.async{
+                    self.notifyObservers()
+                }
+            }
+        }
+        
+        task.resume()
+    }
+    
     //MARK: JSON Parsing
     func parseCategory(jsonFile: Data){
         guard let json = try? JSONSerialization.jsonObject(with: jsonFile, options: []) as! [[String:Any]] else {
