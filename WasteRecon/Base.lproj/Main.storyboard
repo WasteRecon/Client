@@ -76,11 +76,11 @@
                     </view>
                     <navigationItem key="navigationItem" title="New Image" largeTitleDisplayMode="always" id="UpD-p7-qrE"/>
                     <connections>
-                        <outlet property="catName" destination="muT-8W-RJe" id="rB9-ot-zda"/>
                         <outlet property="imageView" destination="iQ0-VG-Vm2" id="kO8-cY-RRJ"/>
                         <outlet property="matLabel" destination="DMi-Qf-gaz" id="r9O-ac-zVK"/>
                         <outlet property="matPickerView" destination="BeD-5Y-TVc" id="Tir-L8-b5t"/>
                         <outlet property="saveButton" destination="euW-4b-6Ed" id="Y1o-cT-EY3"/>
+                        <outlet property="shape" destination="muT-8W-RJe" id="rB9-ot-zda"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

@@ -13,11 +13,13 @@ class NewImageViewController: UIViewController, UIImagePickerControllerDelegate,
     //MARK: Properties
     var newImage: Image?
     let imageService = ImageServices()
+    let itemService = ItemServices()
+    var newItem: Item?
     let materials: [String] = ["plastic", "glass", "paper", "fabric", "other"]
     
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var saveButton: UIButton!
-    @IBOutlet weak var catName: UITextField!
+    @IBOutlet weak var shape: UITextField!
     @IBOutlet weak var matPickerView: UIPickerView!
     @IBOutlet weak var matLabel: UILabel!
     
@@ -25,7 +27,7 @@ class NewImageViewController: UIViewController, UIImagePickerControllerDelegate,
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        catName.delegate = self
+        shape.delegate = self
         matPickerView.delegate = self
         matPickerView.dataSource = self
     }
@@ -63,7 +65,7 @@ class NewImageViewController: UIViewController, UIImagePickerControllerDelegate,
 
     //MARK: UITapGestureRecognizer
     @IBAction func selectImageFromLibrary(_ sender: UITapGestureRecognizer) {
-        catName.resignFirstResponder()
+        shape.resignFirstResponder()
         let imagePickerController = UIImagePickerController()
         imagePickerController.sourceType = .photoLibrary
         imagePickerController.delegate = self
@@ -72,7 +74,7 @@ class NewImageViewController: UIViewController, UIImagePickerControllerDelegate,
     
     //MARK: Save Button
     @IBAction func saveImage(_ sender: UIButton) {
-        guard let catName = self.catName.text else{
+        guard let catName = self.shape.text else{
             fatalError("catName prob")
         }
         guard let img = self.imageView.image else {
@@ -83,11 +85,12 @@ class NewImageViewController: UIViewController, UIImagePickerControllerDelegate,
         print(newImage.name)
         print(newImage.catName)
         
-        let material = matLabel.text
+        let newItem = Item(shape: catName, material: matLabel.text!)
         
         imageService.addImageToServer(newImage: newImage) {(complete) in
             print("Post Image success")
-            
+            self.itemService.getCatNameByItem(newItem: newItem) {(complete) in
+                print("get cat name success")}
         }
         
     }
