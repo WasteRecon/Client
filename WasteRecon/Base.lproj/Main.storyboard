@@ -20,7 +20,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="yhb-Ru-tM3">
-                                <rect key="frame" x="8" y="72" width="359" height="559.5"/>
+                                <rect key="frame" x="8" y="72" width="359" height="539.5"/>
                                 <subviews>
                                     <imageView contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" placeholderIntrinsicWidth="240" placeholderIntrinsicHeight="240" image="Image" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="iQ0-VG-Vm2">
                                         <rect key="frame" x="16" y="0.0" width="327" height="327"/>
@@ -38,22 +38,25 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Material" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DMi-Qf-gaz">
+                                        <rect key="frame" x="149" y="373" width="61.5" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <pickerView contentMode="scaleToFill" horizontalHuggingPriority="100" verticalHuggingPriority="100" placeholderIntrinsicWidth="200" placeholderIntrinsicHeight="50" translatesAutoresizingMaskIntoConstraints="NO" id="BeD-5Y-TVc">
+                                        <rect key="frame" x="79.5" y="401.5" width="200" height="100"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="100" id="SdA-EU-Zlf"/>
+                                        </constraints>
+                                    </pickerView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="euW-4b-6Ed">
-                                        <rect key="frame" x="162.5" y="373" width="34" height="30"/>
+                                        <rect key="frame" x="162.5" y="509.5" width="34" height="30"/>
                                         <state key="normal" title="Save"/>
                                         <connections>
                                             <action selector="saveImage:" destination="BYZ-38-t0r" eventType="touchUpInside" id="yX9-RI-aqI"/>
                                         </connections>
                                     </button>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Material" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DMi-Qf-gaz">
-                                        <rect key="frame" x="149" y="411" width="61.5" height="20.5"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <pickerView contentMode="scaleToFill" placeholderIntrinsicWidth="240" placeholderIntrinsicHeight="120" translatesAutoresizingMaskIntoConstraints="NO" id="BeD-5Y-TVc">
-                                        <rect key="frame" x="59.5" y="439.5" width="240" height="120"/>
-                                    </pickerView>
                                 </subviews>
                                 <constraints>
                                     <constraint firstItem="muT-8W-RJe" firstAttribute="leading" secondItem="yhb-Ru-tM3" secondAttribute="leading" constant="8" id="WtG-0i-6a5"/>
@@ -75,6 +78,8 @@
                     <connections>
                         <outlet property="catName" destination="muT-8W-RJe" id="rB9-ot-zda"/>
                         <outlet property="imageView" destination="iQ0-VG-Vm2" id="kO8-cY-RRJ"/>
+                        <outlet property="matLabel" destination="DMi-Qf-gaz" id="r9O-ac-zVK"/>
+                        <outlet property="matPickerView" destination="BeD-5Y-TVc" id="Tir-L8-b5t"/>
                         <outlet property="saveButton" destination="euW-4b-6Ed" id="Y1o-cT-EY3"/>
                     </connections>
                 </viewController>

@@ -8,19 +8,26 @@
 
 import UIKit
 
-class NewImageViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate, UITextFieldDelegate {
+class NewImageViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate, UITextFieldDelegate, UIPickerViewDelegate, UIPickerViewDataSource {
+    
     //MARK: Properties
     var newImage: Image?
     let imageService = ImageServices()
+    let materials: [String] = ["plastic", "glass", "paper", "fabric", "other"]
     
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var saveButton: UIButton!
     @IBOutlet weak var catName: UITextField!
+    @IBOutlet weak var matPickerView: UIPickerView!
+    @IBOutlet weak var matLabel: UILabel!
     
+    //MARK: Initializers
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         catName.delegate = self
+        matPickerView.delegate = self
+        matPickerView.dataSource = self
     }
 
     override func didReceiveMemoryWarning() {
@@ -72,12 +79,34 @@ class NewImageViewController: UIViewController, UIImagePickerControllerDelegate,
             fatalError("Image error")
         }
         let newImage = Image(catName: catName, img: img)
+        
         print(newImage.name)
         print(newImage.catName)
+        
+        let material = matLabel.text
+        
         imageService.addImageToServer(newImage: newImage) {(complete) in
-            print("success")
+            print("Post Image success")
+            
         }
         
+    }
+    
+    //MARK: UIPickerView
+    func numberOfComponents(in pickerView: UIPickerView) -> Int {
+        return 1
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        return 5
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        return materials[row]
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        matLabel.text = materials[row]
     }
     
     
