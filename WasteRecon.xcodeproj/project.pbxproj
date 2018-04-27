@@ -23,6 +23,10 @@
 		2F4605F5208F39E40038B755 /* ImageServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F4605F4208F39E40038B755 /* ImageServices.swift */; };
 		2F4605F7208F428B0038B755 /* ItemServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F4605F6208F428B0038B755 /* ItemServices.swift */; };
 		2F4605F9208F43370038B755 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F4605F8208F43370038B755 /* Item.swift */; };
+		2F4605FB208F47A20038B755 /* CategoriesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F4605FA208F47A20038B755 /* CategoriesTableViewController.swift */; };
+		2F4605FD208F47CA0038B755 /* ImagesCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F4605FC208F47CA0038B755 /* ImagesCollectionViewController.swift */; };
+		2F4605FF208F47EC0038B755 /* CategoriesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F4605FE208F47EC0038B755 /* CategoriesTableViewCell.swift */; };
+		2F460601208F48410038B755 /* ImagesCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F460600208F48410038B755 /* ImagesCollectionViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,6 +69,10 @@
 		2F4605F4208F39E40038B755 /* ImageServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageServices.swift; sourceTree = "<group>"; };
 		2F4605F6208F428B0038B755 /* ItemServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemServices.swift; sourceTree = "<group>"; };
 		2F4605F8208F43370038B755 /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
+		2F4605FA208F47A20038B755 /* CategoriesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesTableViewController.swift; sourceTree = "<group>"; };
+		2F4605FC208F47CA0038B755 /* ImagesCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagesCollectionViewController.swift; sourceTree = "<group>"; };
+		2F4605FE208F47EC0038B755 /* CategoriesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesTableViewCell.swift; sourceTree = "<group>"; };
+		2F460600208F48410038B755 /* ImagesCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagesCollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -151,6 +159,10 @@
 			isa = PBXGroup;
 			children = (
 				2F4605B7208E4CD80038B755 /* NewImageViewController.swift */,
+				2F4605FA208F47A20038B755 /* CategoriesTableViewController.swift */,
+				2F4605FC208F47CA0038B755 /* ImagesCollectionViewController.swift */,
+				2F4605FE208F47EC0038B755 /* CategoriesTableViewCell.swift */,
+				2F460600208F48410038B755 /* ImagesCollectionViewCell.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -318,9 +330,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2F4605FD208F47CA0038B755 /* ImagesCollectionViewController.swift in Sources */,
 				2F4605BE208E4CD80038B755 /* WasteRecon.xcdatamodeld in Sources */,
 				2F4605EF208F30E00038B755 /* Observer.swift in Sources */,
 				2F4605F5208F39E40038B755 /* ImageServices.swift in Sources */,
+				2F4605FB208F47A20038B755 /* CategoriesTableViewController.swift in Sources */,
+				2F4605FF208F47EC0038B755 /* CategoriesTableViewCell.swift in Sources */,
 				2F4605B8208E4CD80038B755 /* NewImageViewController.swift in Sources */,
 				2F4605F3208F31EC0038B755 /* CategoryServices.swift in Sources */,
 				2F4605F1208F314D0038B755 /* Observable.swift in Sources */,
@@ -328,6 +343,7 @@
 				2F4605F7208F428B0038B755 /* ItemServices.swift in Sources */,
 				2F4605B6208E4CD80038B755 /* AppDelegate.swift in Sources */,
 				2F4605EA208F275E0038B755 /* Category.swift in Sources */,
+				2F460601208F48410038B755 /* ImagesCollectionViewCell.swift in Sources */,
 				2F4605ED208F2B270038B755 /* Image.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

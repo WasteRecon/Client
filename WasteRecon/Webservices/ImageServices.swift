@@ -10,7 +10,7 @@ import Foundation
 
 class ImageServices: Observable {
     //MARK: Properties
-    private var apiUrl: String = "http://localhost:41860/iOSDev/webresources"
+    private var apiUrl: String = "http://localhost:41860/WasteRecon/webresources"
     var observers = [Observer]()
     var images = [Image]()
     
@@ -110,7 +110,6 @@ class ImageServices: Observable {
             complete(true)
         }
         task.resume()
-        
     }
     
     //MARK: Parse Json
@@ -126,9 +125,7 @@ class ImageServices: Observable {
                     fatalError("Json error: name, img, catName")
                 }
                 
-                guard let newImage = Image(catName: catName, imgInBase64: img, name: name) else{
-                    fatalError("Failed to initialize newImage")
-                }
+                let newImage = Image(catName: catName, imgInBase64: img, name: name)
                 self.images.append(newImage)
             }
         }

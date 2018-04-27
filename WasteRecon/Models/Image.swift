@@ -15,7 +15,7 @@ class Image {
     var catName: String
     
     //MARK: Initializer
-    init(catName: String, imgInBase64: String){
+    init(catName: String, img: UIImage){
         self.catName = catName
         
         //Set current timestamp as name
@@ -25,10 +25,10 @@ class Image {
         let result = formatter.string(from: date)
         
         self.name = result
-        self.img = Image.convertBase64ToImage(imgString: imgInBase64)
+        self.img = img
     }
     
-    init?(catName: String, imgInBase64: String, name: String){
+    init(catName: String, imgInBase64: String, name: String){
         self.catName = catName
         self.name = name
         self.img = Image.convertBase64ToImage(imgString: imgInBase64)

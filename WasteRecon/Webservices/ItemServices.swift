@@ -10,7 +10,7 @@ import Foundation
 
 class ItemServices: Observable{
     //MARK: Properties
-    private var apiUrl: String = "http://localhost:41860/iOSDev/webresources"
+    private var apiUrl: String = "http://localhost:41860/WasteRecon/webresources"
     var observers = [Observer]()
     var catName: String?
     
