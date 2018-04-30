@@ -8,9 +8,12 @@
 
 import UIKit
 
-class CategoryPageViewController: UIPageViewController, UIPageViewControllerDelegate, UIPageViewControllerDataSource {
+class CategoryPageViewController: UIPageViewController, UIPageViewControllerDelegate, UIPageViewControllerDataSource, Observer{
     //MARK: Properties
     var catName: String?
+    let categoryService = CategoryServices()
+    var category: Category?
+    
     private(set) lazy var categoryVC: [UIViewController] = {
         return [self.getViewController(name: "FirstPageViewController"),
                 self.getViewController(name: "SecondPageViewController"),
@@ -20,7 +23,7 @@ class CategoryPageViewController: UIPageViewController, UIPageViewControllerDele
     //MARK: Initializers
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        categoryService.register(newObserver: self)
         dataSource = self
         // Do any additional setup after loading the view.
         
@@ -29,6 +32,7 @@ class CategoryPageViewController: UIPageViewController, UIPageViewControllerDele
         }
         
         print("ABS: \(catName)")
+        loadCategory()
     }
 
     override func didReceiveMemoryWarning() {
@@ -89,6 +93,21 @@ class CategoryPageViewController: UIPageViewController, UIPageViewControllerDele
     //MARK: Private Methods
     private func getViewController(name: String) -> UIViewController {
         return UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier:"\(name)")
+    }
+    
+    private func loadCategory(){
+        categoryService.getCategoryByName(catName: catName ?? "other")
+    }
+    
+    func update() {
+        print("oh what the hell")
+        category = categoryService.categories.first
+        guard let firstViewController = categoryVC.first as? FirstPageViewController else {
+            fatalError("FVC problem")
+        }
+        print(catName!)
+        
+        firstViewController.imageView.image = category?.img
     }
     
 

@@ -180,7 +180,7 @@
         <!--FirstPageViewController-->
         <scene sceneID="I2g-IP-r2J">
             <objects>
-                <viewController storyboardIdentifier="FirstPageViewController" title="FirstPageViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="hfb-PM-fWn" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="FirstPageViewController" title="FirstPageViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="hfb-PM-fWn" customClass="FirstPageViewController" customModule="WasteRecon" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="avA-6n-NH5">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -212,6 +212,9 @@
                         <viewLayoutGuide key="safeArea" id="w5v-lX-gpk"/>
                     </view>
                     <navigationItem key="navigationItem" title="Category" id="TPH-2K-QOQ"/>
+                    <connections>
+                        <outlet property="imageView" destination="t8E-yV-RoD" id="DTc-cZ-Eg9"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6n6-eF-8sO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

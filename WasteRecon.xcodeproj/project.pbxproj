@@ -28,6 +28,7 @@
 		2F4605FF208F47EC0038B755 /* CategoriesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F4605FE208F47EC0038B755 /* CategoriesTableViewCell.swift */; };
 		2F460601208F48410038B755 /* ImagesCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F460600208F48410038B755 /* ImagesCollectionViewCell.swift */; };
 		2F460603209704860038B755 /* CategoryPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F460602209704860038B755 /* CategoryPageViewController.swift */; };
+		2FCD0F8E2097874100FE48F5 /* FirstPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FCD0F8D2097874100FE48F5 /* FirstPageViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -75,6 +76,7 @@
 		2F4605FE208F47EC0038B755 /* CategoriesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesTableViewCell.swift; sourceTree = "<group>"; };
 		2F460600208F48410038B755 /* ImagesCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagesCollectionViewCell.swift; sourceTree = "<group>"; };
 		2F460602209704860038B755 /* CategoryPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryPageViewController.swift; sourceTree = "<group>"; };
+		2FCD0F8D2097874100FE48F5 /* FirstPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstPageViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -160,6 +162,7 @@
 		2F4605E6208F26370038B755 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				2FCD0F8A209786B700FE48F5 /* CategoryPageVC */,
 				2F4605B7208E4CD80038B755 /* NewImageViewController.swift */,
 				2F4605FA208F47A20038B755 /* CategoriesTableViewController.swift */,
 				2F4605FC208F47CA0038B755 /* ImagesCollectionViewController.swift */,
@@ -197,6 +200,14 @@
 				2F4605F0208F314D0038B755 /* Observable.swift */,
 			);
 			path = Protocols;
+			sourceTree = "<group>";
+		};
+		2FCD0F8A209786B700FE48F5 /* CategoryPageVC */ = {
+			isa = PBXGroup;
+			children = (
+				2FCD0F8D2097874100FE48F5 /* FirstPageViewController.swift */,
+			);
+			path = CategoryPageVC;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -348,6 +359,7 @@
 				2F4605B6208E4CD80038B755 /* AppDelegate.swift in Sources */,
 				2F4605EA208F275E0038B755 /* Category.swift in Sources */,
 				2F460601208F48410038B755 /* ImagesCollectionViewCell.swift in Sources */,
+				2FCD0F8E2097874100FE48F5 /* FirstPageViewController.swift in Sources */,
 				2F4605ED208F2B270038B755 /* Image.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
