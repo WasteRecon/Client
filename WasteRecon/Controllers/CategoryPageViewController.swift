@@ -10,6 +10,7 @@ import UIKit
 
 class CategoryPageViewController: UIPageViewController, UIPageViewControllerDelegate, UIPageViewControllerDataSource {
     //MARK: Properties
+    var catName: String?
     private(set) lazy var categoryVC: [UIViewController] = {
         return [self.getViewController(name: "FirstPageViewController"),
                 self.getViewController(name: "SecondPageViewController"),
@@ -26,6 +27,8 @@ class CategoryPageViewController: UIPageViewController, UIPageViewControllerDele
         if let firstViewController = categoryVC.first {
             setViewControllers([firstViewController], direction: .forward, animated: true, completion: nil)
         }
+        
+        print("ABS: \(catName)")
     }
 
     override func didReceiveMemoryWarning() {

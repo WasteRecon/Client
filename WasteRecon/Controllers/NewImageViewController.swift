@@ -90,7 +90,14 @@ class NewImageViewController: UIViewController, UIImagePickerControllerDelegate,
         imageService.addImageToServer(newImage: newImage) {(complete) in
             print("Post Image success")
             self.itemService.getCatNameByItem(newItem: newItem) {(complete) in
-                print("get cat name success")}
+                DispatchQueue.main.async {
+                    self.performSegue(withIdentifier: "showDetail", sender: nil)
+                }
+                    /*guard let categoryPageViewController = self.storyboard?.instantiateViewController(withIdentifier: "CategoryPageViewController") as? CategoryPageViewController else {return}
+                    categoryPageViewController.catName = self.itemService.catName
+                    self.present(categoryPageViewController, animated: true, completion: nil)*/
+                
+                }
         }
     }
     
@@ -111,6 +118,16 @@ class NewImageViewController: UIViewController, UIImagePickerControllerDelegate,
         matLabel.text = materials[row]
     }
     
+    //MARK: Properties
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let categoryPageVC =  segue.destination as? CategoryPageViewController else{
+            print("cant create categoryPageVC")
+            return
+        }
+        print("this is it")
+        categoryPageVC.catName = itemService.catName
+        print("this is it: \(itemService.catName)")
+    }
     
 }
 
