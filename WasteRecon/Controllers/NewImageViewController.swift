@@ -92,7 +92,6 @@ class NewImageViewController: UIViewController, UIImagePickerControllerDelegate,
             self.itemService.getCatNameByItem(newItem: newItem) {(complete) in
                 print("get cat name success")}
         }
-        
     }
     
     //MARK: UIPickerView

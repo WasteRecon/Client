@@ -43,9 +43,10 @@ class CategoriesTableViewController: UITableViewController, Observer {
         
         let category = categories[indexPath.row]
         
-        cell.catNameLabel.text = category.catName
+        cell.catNameLabel.text = category.title
         cell.catDescLabel.text = category.desc
         cell.colorImage.image = category.img
+        
         
         return cell
     }
