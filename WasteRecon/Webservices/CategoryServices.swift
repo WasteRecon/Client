@@ -81,7 +81,7 @@ class CategoryServices: Observable {
                     fatalError("Parse error: catName and title")
                 }
                 
-                guard let desc = category["desc"] as? String, let facts = category["facts"] as? String else {
+                guard let desc = category["description"] as? String, let facts = category["facts"] as? String else {
                     fatalError("Parse error: desc and facts")
                 }
                 

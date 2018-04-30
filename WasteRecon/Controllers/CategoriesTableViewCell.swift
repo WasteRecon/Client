@@ -9,7 +9,12 @@
 import UIKit
 
 class CategoriesTableViewCell: UITableViewCell {
-
+    //MARK: Properties
+    @IBOutlet weak var catNameLabel: UILabel!
+    @IBOutlet weak var catDescLabel: UILabel!
+    @IBOutlet weak var colorImage: UIImageView!
+    
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
