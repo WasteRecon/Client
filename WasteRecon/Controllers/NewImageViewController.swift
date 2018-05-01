@@ -93,11 +93,7 @@ class NewImageViewController: UIViewController, UIImagePickerControllerDelegate,
                 DispatchQueue.main.async {
                     self.performSegue(withIdentifier: "showDetail", sender: nil)
                 }
-                    /*guard let categoryPageViewController = self.storyboard?.instantiateViewController(withIdentifier: "CategoryPageViewController") as? CategoryPageViewController else {return}
-                    categoryPageViewController.catName = self.itemService.catName
-                    self.present(categoryPageViewController, animated: true, completion: nil)*/
-                
-                }
+            }
         }
     }
     
@@ -124,9 +120,7 @@ class NewImageViewController: UIViewController, UIImagePickerControllerDelegate,
             print("cant create categoryPageVC")
             return
         }
-        print("this is it")
         categoryPageVC.catName = itemService.catName
-        print("this is it: \(itemService.catName)")
     }
     
 }

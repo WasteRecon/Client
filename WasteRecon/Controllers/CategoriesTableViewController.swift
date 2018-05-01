@@ -12,6 +12,7 @@ class CategoriesTableViewController: UITableViewController, Observer {
     //MARK: Properties
     let categoriesService = CategoryServices()
     var categories = [Category]()
+    var catName: String!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -43,14 +44,28 @@ class CategoriesTableViewController: UITableViewController, Observer {
         
         let category = categories[indexPath.row]
         
-        cell.catNameLabel.text = category.title
+        cell.catTitleLabel.text = category.title
         cell.catDescLabel.text = category.desc
         cell.colorImage.image = category.img
-        
+        cell.catName = category.catName
         
         return cell
     }
     
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        guard let cell = tableView.cellForRow(at: indexPath) as? CategoriesTableViewCell else {
+            fatalError("cant get cell")
+        }
+        self.catName = cell.catName
+        self.performSegue(withIdentifier: "showDetailFromTable", sender: nil)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let categoryPVC = segue.destination as? CategoryPageViewController else {
+            fatalError("cant create categoryPVC")
+        }
+        categoryPVC.catName = self.catName
+    }
     func loadCategories() {
         categoriesService.getAllCategories()
     }

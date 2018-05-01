@@ -131,7 +131,7 @@
                                 </tableViewCellContentView>
                                 <connections>
                                     <outlet property="catDescLabel" destination="EjT-ql-WT9" id="0CW-rg-gBq"/>
-                                    <outlet property="catNameLabel" destination="K73-Ic-NvN" id="jJ6-0i-8of"/>
+                                    <outlet property="catTitleLabel" destination="K73-Ic-NvN" id="jJ6-0i-8of"/>
                                     <outlet property="colorImage" destination="iJB-Fc-3N4" id="SHw-pQ-HWc"/>
                                 </connections>
                             </tableViewCell>
@@ -144,6 +144,9 @@
                     <navigationItem key="navigationItem" title="Categories" id="lXK-i3-WLx">
                         <barButtonItem key="rightBarButtonItem" id="Drr-xq-7pt"/>
                     </navigationItem>
+                    <connections>
+                        <segue destination="c4S-fa-Y5C" kind="show" identifier="showDetailFromTable" id="MjZ-oC-zCA"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FET-0t-cX7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -382,4 +385,7 @@
     <resources>
         <image name="Image" width="540" height="540"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="MjZ-oC-zCA"/>
+    </inferredMetricsTieBreakers>
 </document>
