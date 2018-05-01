@@ -8,18 +8,19 @@
 
 import UIKit
 
-private let reuseIdentifier = "Cell"
+private let reuseIdentifier = "ImageCell"
 
-class ImagesCollectionViewController: UICollectionViewController {
+class ImagesCollectionViewController: UICollectionViewController, Observer{
 
+    //MARK: Properties
+    let imageService = ImageServices()
+    var images = [Image]()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Register cell classes
-        self.collectionView!.register(UICollectionViewCell.self, forCellWithReuseIdentifier: reuseIdentifier)
+        
+        imageService.register(newObserver: self)
+        loadImages()
 
         // Do any additional setup after loading the view.
     }
@@ -42,21 +43,24 @@ class ImagesCollectionViewController: UICollectionViewController {
     // MARK: UICollectionViewDataSource
 
     override func numberOfSections(in collectionView: UICollectionView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        return 0
+        return 1
     }
 
 
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of items
-        return 0
+        return images.count
     }
 
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath)
-    
+        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as? ImagesCollectionViewCell else {
+            fatalError("what the hell")
+        }
+        let image = images[indexPath.row]
+
+        cell.imageView.image = image.img
         // Configure the cell
-    
+        
         return cell
     }
 
@@ -90,5 +94,15 @@ class ImagesCollectionViewController: UICollectionViewController {
     
     }
     */
+    
+    //MARK: Private function
+    func loadImages(){
+        imageService.getAllImages()
+    }
+    
+    func update() {
+        images = imageService.images
+        self.collectionView?.reloadData()
+    }
 
 }
