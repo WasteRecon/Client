@@ -149,16 +149,16 @@
             </objects>
             <point key="canvasLocation" x="2140" y="732.68365817091455"/>
         </scene>
-        <!--View Controller-->
+        <!--SecondPageViewController-->
         <scene sceneID="Dqh-sm-SXI">
             <objects>
-                <viewController storyboardIdentifier="SecondPageViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="ZpC-kh-4fA" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SecondPageViewController" title="SecondPageViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="ZpC-kh-4fA" customClass="SecondPageViewController" customModule="WasteRecon" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="oFo-mW-FkN">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SecondPage" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gMM-en-Lap">
-                                <rect key="frame" x="8" y="28" width="359" height="21"/>
+                                <rect key="frame" x="8" y="28" width="359" height="631"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -167,11 +167,15 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="gMM-en-Lap" firstAttribute="top" secondItem="Nhy-ch-1My" secondAttribute="top" constant="8" id="9kC-K5-TP4"/>
+                            <constraint firstItem="Nhy-ch-1My" firstAttribute="bottom" secondItem="gMM-en-Lap" secondAttribute="bottom" constant="8" id="Fhl-Go-wA7"/>
                             <constraint firstItem="gMM-en-Lap" firstAttribute="leading" secondItem="Nhy-ch-1My" secondAttribute="leading" constant="8" id="Ld8-CH-l8V"/>
                             <constraint firstItem="Nhy-ch-1My" firstAttribute="trailing" secondItem="gMM-en-Lap" secondAttribute="trailing" constant="8" id="pwg-8z-J00"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Nhy-ch-1My"/>
                     </view>
+                    <connections>
+                        <outlet property="descLabel" destination="gMM-en-Lap" id="uSX-9U-aQ0"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="l4w-dB-HkA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -213,6 +217,7 @@
                     </view>
                     <navigationItem key="navigationItem" title="Category" id="TPH-2K-QOQ"/>
                     <connections>
+                        <outlet property="descLabel" destination="JqQ-Gc-SC9" id="VwP-kw-oAn"/>
                         <outlet property="imageView" destination="t8E-yV-RoD" id="DTc-cZ-Eg9"/>
                     </connections>
                 </viewController>
@@ -220,16 +225,16 @@
             </objects>
             <point key="canvasLocation" x="4233" y="20"/>
         </scene>
-        <!--View Controller-->
+        <!--ThirdPageViewController-->
         <scene sceneID="A7G-wq-Ait">
             <objects>
-                <viewController storyboardIdentifier="ThirdPageViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="KmF-56-HXd" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ThirdPageViewController" title="ThirdPageViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="KmF-56-HXd" customClass="ThirdPageViewController" customModule="WasteRecon" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ClF-8z-pMg">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ThirdPage" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UDV-pu-M8f">
-                                <rect key="frame" x="8" y="28" width="359" height="21"/>
+                                <rect key="frame" x="8" y="28" width="359" height="631"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -238,11 +243,15 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="UDV-pu-M8f" firstAttribute="top" secondItem="2T7-rP-9Bo" secondAttribute="top" constant="8" id="9qP-MT-gec"/>
+                            <constraint firstItem="2T7-rP-9Bo" firstAttribute="bottom" secondItem="UDV-pu-M8f" secondAttribute="bottom" constant="8" id="au7-JK-66m"/>
                             <constraint firstItem="2T7-rP-9Bo" firstAttribute="trailing" secondItem="UDV-pu-M8f" secondAttribute="trailing" constant="8" id="jYo-tX-y1Y"/>
                             <constraint firstItem="UDV-pu-M8f" firstAttribute="leading" secondItem="2T7-rP-9Bo" secondAttribute="leading" constant="8" id="mb2-EB-wgU"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="2T7-rP-9Bo"/>
                     </view>
+                    <connections>
+                        <outlet property="factLabel" destination="UDV-pu-M8f" id="Fzj-Nd-9rW"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6xL-mf-Tgd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

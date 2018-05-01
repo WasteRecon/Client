@@ -1,24 +1,23 @@
 //
-//  FirstPageViewController.swift
+//  ThirdPageViewController.swift
 //  WasteRecon
 //
-//  Created by Tran Cong Thanh on 30/04/2018.
+//  Created by Tran Cong Thanh on 01/05/2018.
 //  Copyright © 2018 WasteRecon. All rights reserved.
 //
 
 import UIKit
 
-class FirstPageViewController: UIViewController {
+class ThirdPageViewController: UIViewController {
+
+    @IBOutlet weak var factLabel: UILabel!
+    var myParent: CategoryPageViewController?
     
-    
-    //MARK: Properties
-    
-    @IBOutlet weak var descLabel: UILabel!
-    @IBOutlet weak var imageView: UIImageView!
-    
-    //MARK: Initializers
     override func viewDidLoad() {
         super.viewDidLoad()
+        myParent = self.parent as! CategoryPageViewController
+        
+        factLabel.text = myParent?.category?.facts
         // Do any additional setup after loading the view.
     }
 
@@ -37,6 +36,5 @@ class FirstPageViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
-    
-    //MARK: Private function
+
 }

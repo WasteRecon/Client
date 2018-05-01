@@ -90,24 +90,25 @@ class CategoryPageViewController: UIPageViewController, UIPageViewControllerDele
         return firstViewControllerIndex
     }
     
+    
     //MARK: Private Methods
     private func getViewController(name: String) -> UIViewController {
         return UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier:"\(name)")
     }
     
     private func loadCategory(){
-        categoryService.getCategoryByName(catName: catName ?? "other")
+        categoryService.getCategoryByName(catName: catName?.lowercased() ?? "other")
+        print(catName?.lowercased())
     }
     
     func update() {
         print("oh what the hell")
         category = categoryService.categories.first
-        guard let firstViewController = categoryVC.first as? FirstPageViewController else {
+        guard let firstViewController = categoryVC.first as? FirstPageViewController, let thirdViewController = categoryVC.last as? ThirdPageViewController else {
             fatalError("FVC problem")
         }
-        print(catName!)
-        
         firstViewController.imageView.image = category?.img
+        
     }
     
 

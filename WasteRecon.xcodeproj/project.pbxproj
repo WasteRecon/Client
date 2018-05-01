@@ -29,6 +29,8 @@
 		2F460601208F48410038B755 /* ImagesCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F460600208F48410038B755 /* ImagesCollectionViewCell.swift */; };
 		2F460603209704860038B755 /* CategoryPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F460602209704860038B755 /* CategoryPageViewController.swift */; };
 		2FCD0F8E2097874100FE48F5 /* FirstPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FCD0F8D2097874100FE48F5 /* FirstPageViewController.swift */; };
+		2FCD0F902098468D00FE48F5 /* SecondPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FCD0F8F2098468D00FE48F5 /* SecondPageViewController.swift */; };
+		2FCD0F922098469C00FE48F5 /* ThirdPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FCD0F912098469C00FE48F5 /* ThirdPageViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -77,6 +79,8 @@
 		2F460600208F48410038B755 /* ImagesCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagesCollectionViewCell.swift; sourceTree = "<group>"; };
 		2F460602209704860038B755 /* CategoryPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryPageViewController.swift; sourceTree = "<group>"; };
 		2FCD0F8D2097874100FE48F5 /* FirstPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstPageViewController.swift; sourceTree = "<group>"; };
+		2FCD0F8F2098468D00FE48F5 /* SecondPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondPageViewController.swift; sourceTree = "<group>"; };
+		2FCD0F912098469C00FE48F5 /* ThirdPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirdPageViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -206,6 +210,8 @@
 			isa = PBXGroup;
 			children = (
 				2FCD0F8D2097874100FE48F5 /* FirstPageViewController.swift */,
+				2FCD0F8F2098468D00FE48F5 /* SecondPageViewController.swift */,
+				2FCD0F912098469C00FE48F5 /* ThirdPageViewController.swift */,
 			);
 			path = CategoryPageVC;
 			sourceTree = "<group>";
@@ -347,11 +353,13 @@
 				2F4605FD208F47CA0038B755 /* ImagesCollectionViewController.swift in Sources */,
 				2F4605BE208E4CD80038B755 /* WasteRecon.xcdatamodeld in Sources */,
 				2F4605EF208F30E00038B755 /* Observer.swift in Sources */,
+				2FCD0F902098468D00FE48F5 /* SecondPageViewController.swift in Sources */,
 				2F4605F5208F39E40038B755 /* ImageServices.swift in Sources */,
 				2F4605FB208F47A20038B755 /* CategoriesTableViewController.swift in Sources */,
 				2F4605FF208F47EC0038B755 /* CategoriesTableViewCell.swift in Sources */,
 				2F4605B8208E4CD80038B755 /* NewImageViewController.swift in Sources */,
 				2F4605F3208F31EC0038B755 /* CategoryServices.swift in Sources */,
+				2FCD0F922098469C00FE48F5 /* ThirdPageViewController.swift in Sources */,
 				2F4605F1208F314D0038B755 /* Observable.swift in Sources */,
 				2F4605F9208F43370038B755 /* Item.swift in Sources */,
 				2F460603209704860038B755 /* CategoryPageViewController.swift in Sources */,
