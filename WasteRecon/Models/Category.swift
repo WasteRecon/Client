@@ -28,11 +28,10 @@ class Category{
     
     //MARK: Private methods
     //Convert String to Base64
-    //Convert String to Base64
     static func convertImageToBase64(img: UIImage) -> String {
         let imgData = UIImagePNGRepresentation(img)
         guard let base64String = imgData?.base64EncodedString(options: Data.Base64EncodingOptions(rawValue: NSData.Base64EncodingOptions.RawValue(0))) else{
-            fatalError("Unable to encode")
+            fatalError("Category model: Unable to encode")
         }
         return base64String
     }

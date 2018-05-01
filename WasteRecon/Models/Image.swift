@@ -39,7 +39,7 @@ class Image {
     static func convertImageToBase64(img: UIImage) -> String {
         let imgData = UIImagePNGRepresentation(img)
         guard let base64String = imgData?.base64EncodedString(options: Data.Base64EncodingOptions(rawValue: NSData.Base64EncodingOptions.RawValue(0))) else{
-            fatalError("Unable to encode")
+            fatalError("Image model:Unable to encode")
         }
         return base64String
     }

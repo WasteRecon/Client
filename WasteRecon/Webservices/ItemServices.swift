@@ -17,7 +17,7 @@ class ItemServices: Observable{
     //MARK: POST
     func getCatNameByItem(newItem: Item, complete: @escaping (Bool) -> Void){
         guard let url = URL(string: (apiUrl + "/items")) else{
-            fatalError("Failed to create URL: Post Item")
+            fatalError("ItemService: Failed to create URL: Post Item")
         }
         
         var request = URLRequest(url: url)
@@ -29,12 +29,12 @@ class ItemServices: Observable{
         try? request.httpBody = JSONSerialization.data(withJSONObject: jsonContent, options: JSONSerialization.WritingOptions(rawValue: 0))
         
         guard let uploadData = try? JSONEncoder().encode(jsonContent) else {
-            fatalError("Cannot create upload data: Post image")
+            fatalError("ItemService: Cannot create upload data: Post image")
         }
         
         let task = URLSession.shared.uploadTask(with: request, from: uploadData) { data, response, error in
             if let error = error {
-                print ("Client error: \(error)")
+                print ("ItemService: Client error: \(error)")
                 return
             }
             
@@ -44,14 +44,14 @@ class ItemServices: Observable{
             
             guard let response = response as? HTTPURLResponse,
                 (200...299).contains(response.statusCode) else {
-                    print ("Server error response post")
+                    print ("ItemService: Server error response post")
                     return
             }
             if let mimeType = response.mimeType,
                 mimeType == "text/plain",
                 let data = data,
                 let dataString = String(data: data, encoding: .utf8) {
-                print ("Server response: \(dataString)")
+                print ("ItemService: Server response: \(dataString)")
                 self.catName = dataString
             }
             complete(true)

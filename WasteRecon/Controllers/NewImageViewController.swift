@@ -26,7 +26,6 @@ class NewImageViewController: UIViewController, UIImagePickerControllerDelegate,
     //MARK: Initializers
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
         shape.delegate = self
         matPickerView.delegate = self
         matPickerView.dataSource = self
@@ -34,7 +33,6 @@ class NewImageViewController: UIViewController, UIImagePickerControllerDelegate,
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
     
     //MARK: UIIMagePickerController
@@ -44,12 +42,10 @@ class NewImageViewController: UIViewController, UIImagePickerControllerDelegate,
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
         guard let selectedImage = info[UIImagePickerControllerOriginalImage] as? UIImage else {
-            fatalError("Expected a dictionary containing an image, but was provided the following: \(info)")
+            fatalError("NewImageVC: Expected a dictionary containing an image, but was provided the following: \(info)")
         }
         
         imageView.image = selectedImage
-        print("Image picked")
-        
         dismiss(animated: true, completion: nil)
     }
     
@@ -74,22 +70,20 @@ class NewImageViewController: UIViewController, UIImagePickerControllerDelegate,
     
     //MARK: Save Button
     @IBAction func saveImage(_ sender: UIButton) {
-        guard let catName = self.shape.text else{
-            fatalError("catName prob")
+        guard let shape = self.shape.text else{
+            fatalError("NewImageVC: shape error")
         }
         guard let img = self.imageView.image else {
-            fatalError("Image error")
+            fatalError("NewImageVC: Image error")
         }
-        let newImage = Image(catName: catName, img: img)
+        let newItem = Item(shape: shape, material: matLabel.text!)
         
-        print(newImage.name)
-        print(newImage.catName)
-        
-        let newItem = Item(shape: catName, material: matLabel.text!)
-        
-        imageService.addImageToServer(newImage: newImage) {(complete) in
-            print("Post Image success")
-            self.itemService.getCatNameByItem(newItem: newItem) {(complete) in
+        //GetCatName
+        //Post img to server and performSegue
+        itemService.getCatNameByItem(newItem: newItem) {(complete) in
+            print("NewImageVC: getCatName success")
+            self.newImage = Image(catName: self.itemService.catName!, img: img)
+            self.imageService.addImageToServer(newImage: self.newImage!) {(complete) in
                 DispatchQueue.main.async {
                     self.performSegue(withIdentifier: "showDetail", sender: nil)
                 }
@@ -114,10 +108,10 @@ class NewImageViewController: UIViewController, UIImagePickerControllerDelegate,
         matLabel.text = materials[row]
     }
     
-    //MARK: Properties
+    //MARK: Navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard let categoryPageVC =  segue.destination as? CategoryPageViewController else{
-            print("cant create categoryPageVC")
+            print("NewImageVC: cant create categoryPageVC")
             return
         }
         categoryPageVC.catName = itemService.catName

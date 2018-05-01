@@ -17,16 +17,16 @@ class CategoryServices: Observable {
     //MARK: Get all
     func getAllCategories() {
         guard let url = URL(string: (apiUrl + "/categories")) else {
-            fatalError("Failed to create GET All Categores url")
+            fatalError("CategoryService: Failed to create GET All Categores url")
         }
         
         let task = URLSession.shared.dataTask(with: url){data, response, error in
             if let error = error {
-                print("Client error: \(error)")
+                print("CategoryService: Client error: \(error)")
             }
             
             guard let httpResponse = response as? HTTPURLResponse, (200...299).contains(httpResponse.statusCode) else {
-                print("Server error: Failed to GET all categories")
+                print("CategoryService: Server error: Failed to GET all categories")
                 return
             }
             
@@ -44,16 +44,16 @@ class CategoryServices: Observable {
     //MARK: Get category by catName
     func getCategoryByName(catName: String){
         guard let url = URL(string: (apiUrl + "/categories/" + catName)) else {
-            fatalError("Failed to create GET category by Name URL error")
+            fatalError("CategoryService: Failed to create GET category by Name URL error")
         }
         
         let task = URLSession.shared.dataTask(with: url){data, response, error in
             if let error = error {
-                print("Client error: \(error)")
+                print("CategoryService: Client error: \(error)")
             }
             
             guard let httpResponse = response as? HTTPURLResponse, (200...299).contains(httpResponse.statusCode) else {
-                print("Server error: Failed to GET category by name")
+                print("CategoryService: Server error: Failed to GET category by name")
                 return
             }
             
@@ -71,22 +71,22 @@ class CategoryServices: Observable {
     //MARK: JSON Parsing
     func parseCategory(jsonFile: Data){
         guard let json = try? JSONSerialization.jsonObject(with: jsonFile, options: []) as! [[String:Any]] else {
-            fatalError("Failed to parse Category JSON")
+            fatalError("CategoryService: Failed to parse Category JSON")
         }
         
         if !json.isEmpty{
             categories.removeAll()
             for category in json {
                 guard let catName = category["catName"] as? String, let title = category["title"] as? String else {
-                    fatalError("Parse error: catName and title")
+                    fatalError("CategoryService: Parse error: catName and title")
                 }
                 
                 guard let desc = category["description"] as? String, let facts = category["facts"] as? String else {
-                    fatalError("Parse error: desc and facts")
+                    fatalError("CategoryService: Parse error: desc and facts")
                 }
                 
                 guard let img = category["img"] as? String else{
-                    fatalError("Parse error: img")
+                    fatalError("CategoryService: Parse error: img")
                 }
                 
                 let newCategory = Category(catName: catName, title: title, desc: desc, facts: facts, imgInBase64: img)

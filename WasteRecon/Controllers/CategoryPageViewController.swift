@@ -25,13 +25,11 @@ class CategoryPageViewController: UIPageViewController, UIPageViewControllerDele
         super.viewDidLoad()
         categoryService.register(newObserver: self)
         dataSource = self
-        // Do any additional setup after loading the view.
         
+        //Set first scene
         if let firstViewController = categoryVC.first {
             setViewControllers([firstViewController], direction: .forward, animated: true, completion: nil)
         }
-        
-        print("ABS: \(catName)")
         loadCategory()
     }
 
@@ -78,6 +76,7 @@ class CategoryPageViewController: UIPageViewController, UIPageViewControllerDele
         return categoryVC[nextIndex]
     }
     
+    //MARK: Page Control: show page indicator (dots)
     func presentationCount(for pageViewController: UIPageViewController) -> Int {
         return categoryVC.count
     }
@@ -98,28 +97,14 @@ class CategoryPageViewController: UIPageViewController, UIPageViewControllerDele
     
     private func loadCategory(){
         categoryService.getCategoryByName(catName: catName?.lowercased() ?? "other")
-        print(catName?.lowercased())
     }
     
+    //Pass data to firstView
     func update() {
-        print("oh what the hell")
         category = categoryService.categories.first
-        guard let firstViewController = categoryVC.first as? FirstPageViewController, let thirdViewController = categoryVC.last as? ThirdPageViewController else {
-            fatalError("FVC problem")
+        guard let firstViewController = categoryVC.first as? FirstPageViewController else {
+            fatalError("CategoryPageVC: FVC problem")
         }
         firstViewController.imageView.image = category?.img
-        
     }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }

@@ -17,17 +17,17 @@ class ImageServices: Observable {
     //MARK: Get All Images
     func getAllImages(){
         guard let url = URL(string: (apiUrl + "/images")) else {
-            fatalError("Failed to create URL: getAllImages")
+            fatalError("ImageService: Failed to create URL: getAllImages")
         }
         
         let task = URLSession.shared.dataTask(with: url) { data, response, error in
             if let error = error {
-                print("Client error: \(error)")
+                print("ImageService: Client error: \(error)")
             }
             
             guard let httpResponse = response as? HTTPURLResponse,
                 (200...299).contains(httpResponse.statusCode) else {
-                    print("Server error: getAllImages")
+                    print("ImageService: Server error: getAllImages")
                     return
             }
             
@@ -44,16 +44,16 @@ class ImageServices: Observable {
     //MARK: Get image by category name
     func getImageByCatName(catName: String){
         guard let url = URL(string: (apiUrl + "/images/" + catName)) else{
-            fatalError("Failed to create get image by catName URL error")
+            fatalError("ImageService: Failed to create get image by catName URL error")
         }
         
         let task = URLSession.shared.dataTask(with: url){data, response, error in
             if let error = error {
-                print("Client error: \(error)")
+                print("ImageService: Client error: \(error)")
             }
             
             guard let httpResponse = response as? HTTPURLResponse, (200...299).contains(httpResponse.statusCode) else {
-                print("Server error: Failed to get image by catName")
+                print("ImageService: Server error: Failed to get image by catName")
                 return
             }
             
@@ -71,7 +71,7 @@ class ImageServices: Observable {
     //MARK: Post new image
     func addImageToServer(newImage : Image, complete: @escaping (Bool) -> Void) {
         guard let url = URL(string: (apiUrl + "/images")) else {
-            fatalError("Failed to create URL: Post image")
+            fatalError("ImageService: Failed to create URL: Post image")
         }
         
         var request = URLRequest(url: url)
@@ -83,12 +83,12 @@ class ImageServices: Observable {
         try? request.httpBody = JSONSerialization.data(withJSONObject: jsonContent, options: JSONSerialization.WritingOptions(rawValue: 0))
         
         guard let uploadData = try? JSONEncoder().encode(jsonContent) else {
-            fatalError("Cannot create upload data: Post image")
+            fatalError("ImageService: Cannot create upload data: Post image")
         }
         
         let task = URLSession.shared.uploadTask(with: request, from: uploadData) { data, response, error in
             if let error = error {
-                print ("Client error: \(error)")
+                print ("ImageService: Client error: \(error)")
                 return
             }
             
@@ -98,14 +98,14 @@ class ImageServices: Observable {
             
             guard let response = response as? HTTPURLResponse,
                 (200...299).contains(response.statusCode) else {
-                    print ("Server error response post")
+                    print ("ImageService: Server error response post")
                     return
             }
             if let mimeType = response.mimeType,
                 mimeType == "text/plain",
                 let data = data,
                 let dataString = String(data: data, encoding: .utf8) {
-                print ("Server response: \(dataString)")
+                print ("ImageService: Server response: \(dataString)")
             }
             complete(true)
         }
@@ -115,14 +115,14 @@ class ImageServices: Observable {
     //MARK: Parse Json
     func parseImageFromJson(jsonFile: Data){
         guard let json = try? JSONSerialization.jsonObject(with: jsonFile, options: []) as! [[String:Any]] else {
-            fatalError("Failed to parse json: Image")
+            fatalError("ImageService: Failed to parse json: Image")
         }
         
         if !json.isEmpty{
             images.removeAll()
             for image in json {
                 guard let name = image["name"] as? String, let img = image["img"] as? String, let catName = image["catName"] as? String else{
-                    fatalError("Json error: name, img, catName")
+                    fatalError("ImageService: Json error: name, img, catName")
                 }
                 
                 let newImage = Image(catName: catName, imgInBase64: img, name: name)
