@@ -32,6 +32,7 @@
 		2FCD0F902098468D00FE48F5 /* SecondPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FCD0F8F2098468D00FE48F5 /* SecondPageViewController.swift */; };
 		2FCD0F922098469C00FE48F5 /* ThirdPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FCD0F912098469C00FE48F5 /* ThirdPageViewController.swift */; };
 		2FCD0F96209B00A200FE48F5 /* CustomImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FCD0F95209B00A200FE48F5 /* CustomImageView.swift */; };
+		2FCD0F98209B616000FE48F5 /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FCD0F97209B616000FE48F5 /* CustomButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -83,6 +84,7 @@
 		2FCD0F8F2098468D00FE48F5 /* SecondPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondPageViewController.swift; sourceTree = "<group>"; };
 		2FCD0F912098469C00FE48F5 /* ThirdPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirdPageViewController.swift; sourceTree = "<group>"; };
 		2FCD0F95209B00A200FE48F5 /* CustomImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomImageView.swift; sourceTree = "<group>"; };
+		2FCD0F97209B616000FE48F5 /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -223,6 +225,7 @@
 			isa = PBXGroup;
 			children = (
 				2FCD0F95209B00A200FE48F5 /* CustomImageView.swift */,
+				2FCD0F97209B616000FE48F5 /* CustomButton.swift */,
 			);
 			path = UIDesign;
 			sourceTree = "<group>";
@@ -372,6 +375,7 @@
 				2F4605F3208F31EC0038B755 /* CategoryServices.swift in Sources */,
 				2FCD0F96209B00A200FE48F5 /* CustomImageView.swift in Sources */,
 				2FCD0F922098469C00FE48F5 /* ThirdPageViewController.swift in Sources */,
+				2FCD0F98209B616000FE48F5 /* CustomButton.swift in Sources */,
 				2F4605F1208F314D0038B755 /* Observable.swift in Sources */,
 				2F4605F9208F43370038B755 /* Item.swift in Sources */,
 				2F460603209704860038B755 /* CategoryPageViewController.swift in Sources */,

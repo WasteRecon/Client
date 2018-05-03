@@ -42,9 +42,11 @@ class CategoriesTableViewController: UITableViewController, Observer {
         let category = categories[indexPath.row]
         
         cell.catTitleLabel.text = category.title
-        cell.catDescLabel.text = category.desc
         cell.colorImage.image = category.img
         cell.catName = category.catName
+        
+        cell.cellCustom.layer.cornerRadius = cell.cellCustom.frame.height / 5
+        cell.colorImage.setImageAndShadow(image: cell.colorImage.image!, myView: view, radius: 7)
         
         return cell
     }

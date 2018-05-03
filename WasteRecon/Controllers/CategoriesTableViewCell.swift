@@ -11,8 +11,9 @@ import UIKit
 class CategoriesTableViewCell: UITableViewCell {
     //MARK: Properties
     @IBOutlet weak var catTitleLabel: UILabel!
-    @IBOutlet weak var catDescLabel: UILabel!
-    @IBOutlet weak var colorImage: UIImageView!
+    @IBOutlet weak var colorImage: CustomImageView!
+    @IBOutlet weak var cellCustom: UIView!
+    
     var catName: String!
     
     override func awakeFromNib() {

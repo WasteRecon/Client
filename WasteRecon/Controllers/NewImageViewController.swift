@@ -19,7 +19,7 @@ class NewImageViewController: UIViewController, UIImagePickerControllerDelegate,
     let materials: [String] = ["Plastic", "Glass", "Paper", "Fabric", "Other"]
     
     @IBOutlet weak var imageView: CustomImageView!
-    @IBOutlet weak var saveButton: UIButton!
+    @IBOutlet weak var saveButton: CustomButton!
     @IBOutlet weak var shape: UITextField!
     @IBOutlet weak var matPickerView: UIPickerView!
     
@@ -30,9 +30,10 @@ class NewImageViewController: UIViewController, UIImagePickerControllerDelegate,
         matPickerView.delegate = self
         matPickerView.dataSource = self
         
+        saveButton.round(button: saveButton)
         matPickerView.selectRow(2, inComponent: 0, animated: false)
         mat = materials[2]
-        imageView.setImageAndShadow(image: imageView.image!, myView: view)
+        imageView.setImageAndShadow(image: imageView.image!, myView: view, radius: 13)
     }
 
     override func didReceiveMemoryWarning() {
@@ -50,7 +51,7 @@ class NewImageViewController: UIViewController, UIImagePickerControllerDelegate,
         }
         
         imageView.image = selectedImage
-        imageView.setImageAndShadow(image: imageView.image!, myView: view)
+        imageView.setImageAndShadow(image: imageView.image!, myView: view, radius: 13)
         dismiss(animated: true, completion: nil)
     }
     

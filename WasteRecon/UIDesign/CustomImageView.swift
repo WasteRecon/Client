@@ -14,13 +14,13 @@ class CustomImageView: UIImageView {
         
     }
     
-    func setImageAndShadow(image: UIImage, myView : UIView) {
+    func setImageAndShadow(image: UIImage, myView : UIView, radius: CGFloat) {
         self.image = image
         self.superview?.layoutIfNeeded()
         print("Image size \(self.frame.size)")
         self.clipsToBounds = true
         layer.masksToBounds = true
-        layer.cornerRadius = self.frame.height / 13
+        layer.cornerRadius = self.frame.height / radius
         
         /*let Shape = CAShapeLayer()
         let myPath = UIBezierPath(ovalIn: self.frame)
