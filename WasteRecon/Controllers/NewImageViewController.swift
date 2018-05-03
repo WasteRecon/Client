@@ -138,6 +138,8 @@ class NewImageViewController: UIViewController, UIImagePickerControllerDelegate,
             return
         }
         categoryPageVC.catName = itemService.catName
+        self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "New Image", style: .plain, target: nil, action: nil)
+        self.navigationItem.backBarButtonItem?.tintColor = .white
     }
     
 }
