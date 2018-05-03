@@ -21,10 +21,12 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="yhb-Ru-tM3">
-                                <rect key="frame" x="8" y="72" width="359" height="539.5"/>
+                                <rect key="frame" x="8" y="72" width="359" height="523"/>
                                 <subviews>
-                                    <imageView contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" placeholderIntrinsicWidth="240" placeholderIntrinsicHeight="240" image="Image" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="iQ0-VG-Vm2">
+                                    <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" placeholderIntrinsicWidth="240" placeholderIntrinsicHeight="240" image="default" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="iQ0-VG-Vm2" customClass="CustomImageView" customModule="WasteRecon" customModuleProvider="target">
                                         <rect key="frame" x="16" y="0.0" width="327" height="327"/>
+                                        <color key="backgroundColor" red="0.96470540761947632" green="0.96082860231399536" blue="0.96062332391738892" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="tintColor" red="0.96470540760000001" green="0.9608286023" blue="0.96062332390000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <gestureRecognizers/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="iQ0-VG-Vm2" secondAttribute="height" multiplier="1:1" id="Kyi-ux-B7O"/>
@@ -39,26 +41,14 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Material" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DMi-Qf-gaz">
-                                        <rect key="frame" x="149" y="373" width="61.5" height="20.5"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
                                     <pickerView contentMode="scaleToFill" horizontalHuggingPriority="100" verticalHuggingPriority="100" placeholderIntrinsicWidth="200" placeholderIntrinsicHeight="50" translatesAutoresizingMaskIntoConstraints="NO" id="BeD-5Y-TVc">
-                                        <rect key="frame" x="79.5" y="401.5" width="200" height="100"/>
+                                        <rect key="frame" x="79.5" y="373" width="200" height="150"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="100" id="SdA-EU-Zlf"/>
+                                            <constraint firstAttribute="height" constant="150" id="SdA-EU-Zlf"/>
                                         </constraints>
                                     </pickerView>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="euW-4b-6Ed">
-                                        <rect key="frame" x="162.5" y="509.5" width="34" height="30"/>
-                                        <state key="normal" title="Save"/>
-                                        <connections>
-                                            <action selector="saveImage:" destination="BYZ-38-t0r" eventType="touchUpInside" id="yX9-RI-aqI"/>
-                                        </connections>
-                                    </button>
                                 </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstItem="muT-8W-RJe" firstAttribute="leading" secondItem="yhb-Ru-tM3" secondAttribute="leading" constant="8" id="WtG-0i-6a5"/>
                                     <constraint firstAttribute="trailing" secondItem="muT-8W-RJe" secondAttribute="trailing" constant="8" id="cbq-Zr-i5b"/>
@@ -66,10 +56,27 @@
                                     <constraint firstItem="iQ0-VG-Vm2" firstAttribute="leading" secondItem="yhb-Ru-tM3" secondAttribute="leading" constant="16" id="xkN-G6-ta3"/>
                                 </constraints>
                             </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="euW-4b-6Ed">
+                                <rect key="frame" x="20" y="564" width="335" height="46"/>
+                                <color key="backgroundColor" red="0.54371671728961446" green="0.52257364392364858" blue="0.59341337081744583" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="46" id="B4z-Yw-mHm"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                <state key="normal" title="Save">
+                                    <color key="titleColor" red="0.96470540761947632" green="0.96082860231399536" blue="0.96062332391738892" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="saveImage:" destination="BYZ-38-t0r" eventType="touchUpInside" id="yX9-RI-aqI"/>
+                                </connections>
+                            </button>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.19628295302391052" green="0.18381026387214661" blue="0.20859494805335999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="euW-4b-6Ed" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="3fE-J3-wAz"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="euW-4b-6Ed" secondAttribute="trailing" constant="20" id="Kmg-i6-RmH"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="yhb-Ru-tM3" secondAttribute="trailing" constant="8" id="NnA-ZG-IWS"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="euW-4b-6Ed" secondAttribute="bottom" constant="8" id="d1s-vv-48F"/>
                             <constraint firstItem="yhb-Ru-tM3" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="8" id="f9w-y0-UMf"/>
                             <constraint firstItem="yhb-Ru-tM3" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="8" id="gaB-lW-pLF"/>
                         </constraints>
@@ -78,7 +85,6 @@
                     <navigationItem key="navigationItem" title="New Image" largeTitleDisplayMode="always" id="UpD-p7-qrE"/>
                     <connections>
                         <outlet property="imageView" destination="iQ0-VG-Vm2" id="kO8-cY-RRJ"/>
-                        <outlet property="matLabel" destination="DMi-Qf-gaz" id="r9O-ac-zVK"/>
                         <outlet property="matPickerView" destination="BeD-5Y-TVc" id="Tir-L8-b5t"/>
                         <outlet property="saveButton" destination="euW-4b-6Ed" id="Y1o-cT-EY3"/>
                         <outlet property="shape" destination="muT-8W-RJe" id="rB9-ot-zda"/>
@@ -202,7 +208,7 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Image" translatesAutoresizingMaskIntoConstraints="NO" id="t8E-yV-RoD">
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" placeholderIntrinsicWidth="400" placeholderIntrinsicHeight="400" image="Image" translatesAutoresizingMaskIntoConstraints="NO" id="t8E-yV-RoD">
                                         <rect key="frame" x="0.0" y="28.5" width="359" height="359"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="t8E-yV-RoD" secondAttribute="height" multiplier="1:1" id="vNN-q2-29D"/>
@@ -316,10 +322,12 @@
                 <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="NMh-JR-D4D" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationItem key="navigationItem" title="WasteRecon" id="XDW-vO-uuo"/>
-                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="jBz-Ri-DiX">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" barStyle="black" id="jBz-Ri-DiX">
                         <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <color key="barTintColor" red="0.082441143691539764" green="0.078423149883747101" blue="0.078369118273258209" alpha="0.77199272260273977" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="selectedImageTintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </tabBar>
                     <connections>
                         <segue destination="TXW-ZJ-2GB" kind="relationship" relationship="viewControllers" id="rrE-wx-1gW"/>
@@ -335,11 +343,17 @@
         <scene sceneID="dp2-e3-ZUn">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="TXW-ZJ-2GB" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="New Image" id="wtQ-PW-QeT"/>
+                    <tabBarItem key="tabBarItem" title="New Image" image="plus" id="wtQ-PW-QeT"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="i0c-0b-4pJ">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" barStyle="black" id="i0c-0b-4pJ">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.24328574538230896" green="0.23053890466690063" blue="0.27190917730331421" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
+                            <color key="textColor" red="0.96470540761947632" green="0.96082860231399536" blue="0.96062332391738892" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <color key="textShadowColor" red="0.19628295300000001" green="0.18381026389999999" blue="0.20859494810000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -354,9 +368,9 @@
         <scene sceneID="GcJ-2R-DWs">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="GtZ-E0-ka2" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Categories" id="aSF-ki-7ng"/>
+                    <tabBarItem key="tabBarItem" title="Categories" image="category" id="aSF-ki-7ng"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="zSp-6q-2n8">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" barStyle="black" id="zSp-6q-2n8">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -373,9 +387,9 @@
         <scene sceneID="EQS-G0-pdB">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="2A2-5d-ZAb" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Images" id="x0W-oB-O6n"/>
+                    <tabBarItem key="tabBarItem" title="Images" image="tabimage" id="x0W-oB-O6n"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="bR9-04-3ty">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" barStyle="black" id="bR9-04-3ty">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -399,8 +413,12 @@
     </scenes>
     <resources>
         <image name="Image" width="540" height="540"/>
+        <image name="category" width="32" height="32"/>
+        <image name="default" width="750" height="750"/>
+        <image name="plus" width="32" height="32"/>
+        <image name="tabimage" width="32" height="32"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="MjZ-oC-zCA"/>
+        <segue reference="dT2-5u-ALu"/>
     </inferredMetricsTieBreakers>
 </document>

@@ -15,13 +15,13 @@ class NewImageViewController: UIViewController, UIImagePickerControllerDelegate,
     let imageService = ImageServices()
     let itemService = ItemServices()
     var newItem: Item?
-    let materials: [String] = ["plastic", "glass", "paper", "fabric", "other"]
+    var mat: String?
+    let materials: [String] = ["Plastic", "Glass", "Paper", "Fabric", "Other"]
     
-    @IBOutlet weak var imageView: UIImageView!
+    @IBOutlet weak var imageView: CustomImageView!
     @IBOutlet weak var saveButton: UIButton!
     @IBOutlet weak var shape: UITextField!
     @IBOutlet weak var matPickerView: UIPickerView!
-    @IBOutlet weak var matLabel: UILabel!
     
     //MARK: Initializers
     override func viewDidLoad() {
@@ -29,6 +29,9 @@ class NewImageViewController: UIViewController, UIImagePickerControllerDelegate,
         shape.delegate = self
         matPickerView.delegate = self
         matPickerView.dataSource = self
+        
+        mat = materials[0]
+        imageView.setImageAndShadow(image: imageView.image!, myView: view)
     }
 
     override func didReceiveMemoryWarning() {
@@ -46,6 +49,7 @@ class NewImageViewController: UIViewController, UIImagePickerControllerDelegate,
         }
         
         imageView.image = selectedImage
+        imageView.setImageAndShadow(image: imageView.image!, myView: view)
         dismiss(animated: true, completion: nil)
     }
     
@@ -70,13 +74,13 @@ class NewImageViewController: UIViewController, UIImagePickerControllerDelegate,
     
     //MARK: Save Button
     @IBAction func saveImage(_ sender: UIButton) {
-        guard let shape = self.shape.text else{
+        guard let shape = self.shape.text?.lowercased() else{
             fatalError("NewImageVC: shape error")
         }
         guard let img = self.imageView.image else {
             fatalError("NewImageVC: Image error")
         }
-        let newItem = Item(shape: shape, material: matLabel.text!)
+        let newItem = Item(shape: shape, material: mat!.lowercased())
         
         //GetCatName
         //Post img to server and performSegue
@@ -105,7 +109,24 @@ class NewImageViewController: UIViewController, UIImagePickerControllerDelegate,
     }
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-        matLabel.text = materials[row]
+        mat = materials[row]
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, rowHeightForComponent component: Int) -> CGFloat {
+        return 30
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, viewForRow row: Int, forComponent component: Int, reusing view: UIView?) -> UIView {
+        let view = UIView(frame: CGRect(x: 0, y: 0, width: 200, height: 30))
+        
+        let myLabel = UILabel(frame: CGRect(x: 0, y: 0, width: 200, height: 30))
+        myLabel.text = materials[row]
+        myLabel.textColor = UIColor.white
+        myLabel.textAlignment = .center
+        myLabel.font = UIFont.systemFont(ofSize: 20, weight: UIFont.Weight.semibold)
+        view.addSubview(myLabel)
+        
+        return view
     }
     
     //MARK: Navigation

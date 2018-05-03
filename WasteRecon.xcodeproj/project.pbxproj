@@ -31,6 +31,7 @@
 		2FCD0F8E2097874100FE48F5 /* FirstPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FCD0F8D2097874100FE48F5 /* FirstPageViewController.swift */; };
 		2FCD0F902098468D00FE48F5 /* SecondPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FCD0F8F2098468D00FE48F5 /* SecondPageViewController.swift */; };
 		2FCD0F922098469C00FE48F5 /* ThirdPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FCD0F912098469C00FE48F5 /* ThirdPageViewController.swift */; };
+		2FCD0F96209B00A200FE48F5 /* CustomImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FCD0F95209B00A200FE48F5 /* CustomImageView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -81,6 +82,7 @@
 		2FCD0F8D2097874100FE48F5 /* FirstPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstPageViewController.swift; sourceTree = "<group>"; };
 		2FCD0F8F2098468D00FE48F5 /* SecondPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondPageViewController.swift; sourceTree = "<group>"; };
 		2FCD0F912098469C00FE48F5 /* ThirdPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirdPageViewController.swift; sourceTree = "<group>"; };
+		2FCD0F95209B00A200FE48F5 /* CustomImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomImageView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -131,6 +133,7 @@
 		2F4605B4208E4CD80038B755 /* WasteRecon */ = {
 			isa = PBXGroup;
 			children = (
+				2FCD0F94209B006A00FE48F5 /* UIDesign */,
 				2F4605EB208F276B0038B755 /* Protocols */,
 				2F4605E8208F26520038B755 /* Models */,
 				2F4605E7208F26450038B755 /* Webservices */,
@@ -214,6 +217,14 @@
 				2FCD0F912098469C00FE48F5 /* ThirdPageViewController.swift */,
 			);
 			path = CategoryPageVC;
+			sourceTree = "<group>";
+		};
+		2FCD0F94209B006A00FE48F5 /* UIDesign */ = {
+			isa = PBXGroup;
+			children = (
+				2FCD0F95209B00A200FE48F5 /* CustomImageView.swift */,
+			);
+			path = UIDesign;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -359,6 +370,7 @@
 				2F4605FF208F47EC0038B755 /* CategoriesTableViewCell.swift in Sources */,
 				2F4605B8208E4CD80038B755 /* NewImageViewController.swift in Sources */,
 				2F4605F3208F31EC0038B755 /* CategoryServices.swift in Sources */,
+				2FCD0F96209B00A200FE48F5 /* CustomImageView.swift in Sources */,
 				2FCD0F922098469C00FE48F5 /* ThirdPageViewController.swift in Sources */,
 				2F4605F1208F314D0038B755 /* Observable.swift in Sources */,
 				2F4605F9208F43370038B755 /* Item.swift in Sources */,
