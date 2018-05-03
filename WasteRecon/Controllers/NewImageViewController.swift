@@ -30,7 +30,8 @@ class NewImageViewController: UIViewController, UIImagePickerControllerDelegate,
         matPickerView.delegate = self
         matPickerView.dataSource = self
         
-        mat = materials[0]
+        matPickerView.selectRow(2, inComponent: 0, animated: false)
+        mat = materials[2]
         imageView.setImageAndShadow(image: imageView.image!, myView: view)
     }
 
