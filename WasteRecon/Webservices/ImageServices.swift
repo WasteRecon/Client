@@ -8,145 +8,36 @@
 
 import Foundation
 
-class ImageServices: Observable {
+class ImageServices{
+    static let globalImages = ImageServices()
+    
     //MARK: Properties
-    private var apiUrl: String = "http://localhost:41860/WasteRecon/webresources"
     var observers = [Observer]()
     var images = [Image]()
     
     //MARK: Get All Images
-    func getAllImages(){
-        guard let url = URL(string: (apiUrl + "/images")) else {
-            fatalError("ImageService: Failed to create URL: getAllImages")
-        }
-        
-        let task = URLSession.shared.dataTask(with: url) { data, response, error in
-            if let error = error {
-                print("ImageService: Client error: \(error)")
-            }
-            
-            guard let httpResponse = response as? HTTPURLResponse,
-                (200...299).contains(httpResponse.statusCode) else {
-                    print("ImageService: Server error: getAllImages")
-                    return
-            }
-            
-            if let data = data {
-                self.parseImageFromJson(jsonFile: data)
-                DispatchQueue.main.async {
-                    self.notifyObservers()
-                }
-            }
-        }
-        task.resume()
+    func getAllImages() -> [Image]{
+        //ImageServices.globalImages.notifyObservers()
+        return images
     }
     
     //MARK: Get image by category name
-    func getImageByCatName(catName: String){
-        guard let url = URL(string: (apiUrl + "/images/" + catName)) else{
-            fatalError("ImageService: Failed to create get image by catName URL error")
-        }
-        
-        let task = URLSession.shared.dataTask(with: url){data, response, error in
-            if let error = error {
-                print("ImageService: Client error: \(error)")
-            }
-            
-            guard let httpResponse = response as? HTTPURLResponse, (200...299).contains(httpResponse.statusCode) else {
-                print("ImageService: Server error: Failed to get image by catName")
-                return
-            }
-            
-            if let data = data {
-                self.parseImageFromJson(jsonFile: data)
-                DispatchQueue.main.async{
-                    self.notifyObservers()
-                }
+    func getImageByCatName(catName: String) -> [Image]{
+        var imgByCat = [Image]()
+        for image in images {
+            if(catName == image.catName){
+                imgByCat.append(image)
             }
         }
         
-        task.resume()
+        //notifyObservers()
+        return imgByCat
     }
     
     //MARK: Post new image
-    func addImageToServer(newImage : Image, complete: @escaping (Bool) -> Void) {
-        guard let url = URL(string: (apiUrl + "/images")) else {
-            fatalError("ImageService: Failed to create URL: Post image")
-        }
-        
-        var request = URLRequest(url: url)
-        request.httpMethod = "POST"
-        request.addValue("application/json", forHTTPHeaderField: "Content-Type")
-        request.addValue("text/plain", forHTTPHeaderField: "Accept")
-        
-        let jsonContent = ["name": newImage.name , "img": Image.convertImageToBase64(img: newImage.img), "catName": newImage.catName]
-        try? request.httpBody = JSONSerialization.data(withJSONObject: jsonContent, options: JSONSerialization.WritingOptions(rawValue: 0))
-        
-        guard let uploadData = try? JSONEncoder().encode(jsonContent) else {
-            fatalError("ImageService: Cannot create upload data: Post image")
-        }
-        
-        let task = URLSession.shared.uploadTask(with: request, from: uploadData) { data, response, error in
-            if let error = error {
-                print ("ImageService: Client error: \(error)")
-                return
-            }
-            
-            if let response = response as? HTTPURLResponse {
-                print(response.statusCode)
-            }
-            
-            guard let response = response as? HTTPURLResponse,
-                (200...299).contains(response.statusCode) else {
-                    print ("ImageService: Server error response post")
-                    return
-            }
-            if let mimeType = response.mimeType,
-                mimeType == "text/plain",
-                let data = data,
-                let dataString = String(data: data, encoding: .utf8) {
-                print ("ImageService: Server response: \(dataString)")
-            }
-            complete(true)
-        }
-        task.resume()
-    }
-    
-    //MARK: Parse Json
-    func parseImageFromJson(jsonFile: Data){
-        guard let json = try? JSONSerialization.jsonObject(with: jsonFile, options: []) as! [[String:Any]] else {
-            fatalError("ImageService: Failed to parse json: Image")
-        }
-        
-        if !json.isEmpty{
-            images.removeAll()
-            for image in json {
-                guard let name = image["name"] as? String, let img = image["img"] as? String, let catName = image["catName"] as? String else{
-                    fatalError("ImageService: Json error: name, img, catName")
-                }
-                
-                let newImage = Image(catName: catName, imgInBase64: img, name: name)
-                self.images.append(newImage)
-            }
-        }
-    }
-    
-    //MARK: Observer
-    func register(newObserver: Observer) {
-        if observers.index(where: {($0 as AnyObject) === (newObserver as AnyObject)}) == nil {
-            observers.append(newObserver)
-        }
-    }
-    
-    func unregister(oldObserver: Observer) {
-        if let index = observers.index(where: {($0 as AnyObject) === (oldObserver as AnyObject)}) {
-            observers.remove(at: index)
-        }
-    }
-    
-    func notifyObservers() {
-        for observer in observers {
-            observer.update()
-        }
+    func addImageToServer(newImage: Image, complete: @escaping (Bool) -> Void) {
+        images.append(newImage)
+        //notifyObservers()
+        complete(true)
     }
 }

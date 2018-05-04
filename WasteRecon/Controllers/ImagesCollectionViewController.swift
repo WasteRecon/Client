@@ -10,24 +10,24 @@ import UIKit
 
 private let reuseIdentifier = "ImageCell"
 
-class ImagesCollectionViewController: UICollectionViewController, Observer{
+class ImagesCollectionViewController: UICollectionViewController {
 
     //MARK: Properties
-    let imageService = ImageServices()
     var images = [Image]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        imageService.register(newObserver: self)
         loadImages()
-
-        // Do any additional setup after loading the view.
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        loadImages()
+        self.collectionView!.reloadData()
     }
 
     /*
@@ -41,7 +41,6 @@ class ImagesCollectionViewController: UICollectionViewController, Observer{
     */
 
     // MARK: UICollectionViewDataSource
-
     override func numberOfSections(in collectionView: UICollectionView) -> Int {
         return 1
     }
@@ -60,7 +59,6 @@ class ImagesCollectionViewController: UICollectionViewController, Observer{
 
         cell.imageView.image = image.img
         // Configure the cell
-        
         return cell
     }
 
@@ -97,12 +95,9 @@ class ImagesCollectionViewController: UICollectionViewController, Observer{
     
     //MARK: Private function
     func loadImages(){
-        imageService.getAllImages()
+        images = ImageServices.globalImages.getAllImages()
+        print(images[0].name)
     }
     
-    func update() {
-        images = imageService.images
-        self.collectionView?.reloadData()
-    }
 
 }

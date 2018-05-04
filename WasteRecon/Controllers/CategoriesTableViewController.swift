@@ -8,6 +8,8 @@
 
 import UIKit
 
+private let cellIdentifier = "CategoriesTableViewCell"
+
 class CategoriesTableViewController: UITableViewController, Observer {
     //MARK: Properties
     let categoriesService = CategoryServices()
@@ -34,7 +36,6 @@ class CategoriesTableViewController: UITableViewController, Observer {
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell{
-        let cellIdentifier = "CategoriesTableViewCell"
         guard let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as? CategoriesTableViewCell else {
             fatalError("CategoriesTableVC: The dequeued cell is not an instance of CategoryTableViewCell.")
         }

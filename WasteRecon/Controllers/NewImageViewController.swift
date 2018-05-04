@@ -12,7 +12,6 @@ class NewImageViewController: UIViewController, UIImagePickerControllerDelegate,
     
     //MARK: Properties
     var newImage: Image?
-    let imageService = ImageServices()
     let itemService = ItemServices()
     var newItem: Item?
     var mat: String?
@@ -89,7 +88,7 @@ class NewImageViewController: UIViewController, UIImagePickerControllerDelegate,
         itemService.getCatNameByItem(newItem: newItem) {(complete) in
             print("NewImageVC: getCatName success")
             self.newImage = Image(catName: self.itemService.catName!, img: img)
-            self.imageService.addImageToServer(newImage: self.newImage!) {(complete) in
+            ImageServices.globalImages.addImageToServer(newImage: self.newImage!){(complete) in
                 DispatchQueue.main.async {
                     self.performSegue(withIdentifier: "showDetail", sender: nil)
                 }
