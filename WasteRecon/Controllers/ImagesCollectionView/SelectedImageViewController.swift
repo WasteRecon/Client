@@ -20,8 +20,8 @@ class SelectedImageViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         imageView.image = selectedImage?.img
-        nameLabel.text = selectedImage?.name
-        catNameLabel.text = selectedImage?.catName
+        nameLabel.text = "Time taken:   \(selectedImage!.name)"
+        catNameLabel.text = "Type:   \(selectedImage!.catName)"
     }
 
     override func didReceiveMemoryWarning() {

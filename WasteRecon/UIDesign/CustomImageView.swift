@@ -17,22 +17,19 @@ class CustomImageView: UIImageView {
     func setImageAndShadow(image: UIImage, myView : UIView, radius: CGFloat) {
         self.image = image
         self.superview?.layoutIfNeeded()
-        print("Image size \(self.frame.size)")
         self.clipsToBounds = true
         layer.masksToBounds = true
         layer.cornerRadius = self.frame.height / radius
-        
-        /*let Shape = CAShapeLayer()
-        let myPath = UIBezierPath(ovalIn: self.frame)
-        
-        Shape.shadowPath = myPath.cgPath
-        Shape.shadowColor = UIColor.black.cgColor
-        Shape.shadowOffset = CGSize(width: 0, height: 3)
-        Shape.shadowRadius  = 7
-        Shape.shadowOpacity = 0.7*/
-        
-        
-        //myView.layer.insertSublayer(Shape, at: 0)
-        
+    }
+    
+    func fadeEdge(imageView: CustomImageView) -> CAGradientLayer{
+        let maskLayer = CAGradientLayer()
+        maskLayer.frame = imageView.bounds
+        maskLayer.shadowRadius = 10
+        maskLayer.shadowPath = CGPath(roundedRect: imageView.bounds.insetBy(dx: 5, dy: 5), cornerWidth: 10, cornerHeight: 10, transform: nil)
+        maskLayer.shadowOpacity = 2;
+        maskLayer.shadowOffset = CGSize.zero
+        maskLayer.shadowColor = UIColor.white.cgColor
+        return maskLayer
     }
 }

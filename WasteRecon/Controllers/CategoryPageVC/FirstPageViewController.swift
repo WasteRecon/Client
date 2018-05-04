@@ -14,7 +14,7 @@ class FirstPageViewController: UIViewController {
     //MARK: Properties
     
     @IBOutlet weak var descLabel: UILabel!
-    @IBOutlet weak var imageView: UIImageView!
+    @IBOutlet weak var imageView: CustomImageView!
     
     //MARK: Initializers
     override func viewDidLoad() {

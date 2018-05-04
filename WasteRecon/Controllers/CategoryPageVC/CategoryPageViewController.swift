@@ -105,6 +105,11 @@ class CategoryPageViewController: UIPageViewController, UIPageViewControllerDele
         guard let firstViewController = categoryVC.first as? FirstPageViewController else {
             fatalError("CategoryPageVC: FVC problem")
         }
-        firstViewController.imageView.image = category?.img
+        guard let myImgView = firstViewController.imageView else {
+            fatalError("myImgView error")
+        }
+        myImgView.image = category?.img
+        
+        myImgView.layer.mask = myImgView.fadeEdge(imageView: myImgView)
     }
 }
