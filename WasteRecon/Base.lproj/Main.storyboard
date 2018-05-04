@@ -7,7 +7,6 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -303,7 +302,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="0.19628295302391052" green="0.18381026387214661" blue="0.20859494805335999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="jCV-5l-0Ez">
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="15" minimumInteritemSpacing="10" id="Ukl-CR-tgL">
                             <size key="itemSize" width="200" height="200"/>
                             <size key="headerReferenceSize" width="0.0" height="0.0"/>
                             <size key="footerReferenceSize" width="0.0" height="0.0"/>
@@ -317,16 +316,19 @@
                                     <rect key="frame" x="0.0" y="0.0" width="200" height="200"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <imageView contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Image" translatesAutoresizingMaskIntoConstraints="NO" id="JxE-O6-eby">
-                                            <rect key="frame" x="8" y="8" width="184" height="184"/>
+                                        <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Image" translatesAutoresizingMaskIntoConstraints="NO" id="JxE-O6-eby" customClass="CustomImageView" customModule="WasteRecon" customModuleProvider="target">
+                                            <rect key="frame" x="0.0" y="0.0" width="200" height="200"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" secondItem="JxE-O6-eby" secondAttribute="height" multiplier="1:1" id="z6C-bN-cYW"/>
+                                            </constraints>
                                         </imageView>
                                     </subviews>
                                 </view>
                                 <constraints>
-                                    <constraint firstAttribute="bottomMargin" secondItem="JxE-O6-eby" secondAttribute="bottom" id="fM9-Pr-OHH"/>
-                                    <constraint firstAttribute="trailingMargin" secondItem="JxE-O6-eby" secondAttribute="trailing" id="fsv-4q-uTD"/>
-                                    <constraint firstItem="JxE-O6-eby" firstAttribute="top" secondItem="guS-NB-f6E" secondAttribute="topMargin" id="gWE-VV-yh4"/>
-                                    <constraint firstItem="JxE-O6-eby" firstAttribute="leading" secondItem="guS-NB-f6E" secondAttribute="leadingMargin" id="yd3-JZ-KkJ"/>
+                                    <constraint firstItem="JxE-O6-eby" firstAttribute="top" secondItem="guS-NB-f6E" secondAttribute="top" id="0Yv-8O-vVO"/>
+                                    <constraint firstItem="JxE-O6-eby" firstAttribute="leading" secondItem="guS-NB-f6E" secondAttribute="leading" id="8MR-YI-pXr"/>
+                                    <constraint firstAttribute="bottom" secondItem="JxE-O6-eby" secondAttribute="bottom" id="bIP-h4-ZLP"/>
+                                    <constraint firstAttribute="trailing" secondItem="JxE-O6-eby" secondAttribute="trailing" id="o1y-e4-cdz"/>
                                 </constraints>
                                 <connections>
                                     <outlet property="imageView" destination="JxE-O6-eby" id="KSQ-9b-4my"/>
@@ -345,7 +347,7 @@
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EAh-mG-Bix" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2140" y="1449"/>
+            <point key="canvasLocation" x="2140" y="1448.7256371814094"/>
         </scene>
         <!--Selected Image-->
         <scene sceneID="ffg-gp-C5W">
@@ -498,6 +500,6 @@
         <image name="tabimage" width="32" height="32"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="dT2-5u-ALu"/>
+        <segue reference="MjZ-oC-zCA"/>
     </inferredMetricsTieBreakers>
 </document>

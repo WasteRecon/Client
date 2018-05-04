@@ -18,6 +18,7 @@ class ImagesCollectionViewController: UICollectionViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         loadImages()
     }
 
@@ -59,6 +60,7 @@ class ImagesCollectionViewController: UICollectionViewController {
         let image = images[indexPath.row]
 
         cell.imageView.image = image.img
+        cell.imageView.setImageAndShadow(image: cell.imageView.image!, myView: view, radius: 10)
         cell.selectedImage = image
         // Configure the cell
         return cell
@@ -116,7 +118,7 @@ class ImagesCollectionViewController: UICollectionViewController {
     //MARK: Private function
     func loadImages(){
         images = ImageServices.globalImages.getAllImages()
-        print(images[0].name)
+        //print(images[0].name)
     }
     
 

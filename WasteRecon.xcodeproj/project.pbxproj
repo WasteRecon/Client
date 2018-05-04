@@ -173,14 +173,10 @@
 		2F4605E6208F26370038B755 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				2FCD0F9C209C6B4000FE48F5 /* ImagesCollectionView */,
+				2FCD0F9B209C6B2600FE48F5 /* CategoriesTableView */,
 				2FCD0F8A209786B700FE48F5 /* CategoryPageVC */,
 				2F4605B7208E4CD80038B755 /* NewImageViewController.swift */,
-				2F4605FA208F47A20038B755 /* CategoriesTableViewController.swift */,
-				2F4605FC208F47CA0038B755 /* ImagesCollectionViewController.swift */,
-				2F4605FE208F47EC0038B755 /* CategoriesTableViewCell.swift */,
-				2F460600208F48410038B755 /* ImagesCollectionViewCell.swift */,
-				2F460602209704860038B755 /* CategoryPageViewController.swift */,
-				2FCD0F99209C61E400FE48F5 /* SelectedImageViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -217,6 +213,7 @@
 		2FCD0F8A209786B700FE48F5 /* CategoryPageVC */ = {
 			isa = PBXGroup;
 			children = (
+				2F460602209704860038B755 /* CategoryPageViewController.swift */,
 				2FCD0F8D2097874100FE48F5 /* FirstPageViewController.swift */,
 				2FCD0F8F2098468D00FE48F5 /* SecondPageViewController.swift */,
 				2FCD0F912098469C00FE48F5 /* ThirdPageViewController.swift */,
@@ -231,6 +228,25 @@
 				2FCD0F97209B616000FE48F5 /* CustomButton.swift */,
 			);
 			path = UIDesign;
+			sourceTree = "<group>";
+		};
+		2FCD0F9B209C6B2600FE48F5 /* CategoriesTableView */ = {
+			isa = PBXGroup;
+			children = (
+				2F4605FE208F47EC0038B755 /* CategoriesTableViewCell.swift */,
+				2F4605FA208F47A20038B755 /* CategoriesTableViewController.swift */,
+			);
+			path = CategoriesTableView;
+			sourceTree = "<group>";
+		};
+		2FCD0F9C209C6B4000FE48F5 /* ImagesCollectionView */ = {
+			isa = PBXGroup;
+			children = (
+				2F4605FC208F47CA0038B755 /* ImagesCollectionViewController.swift */,
+				2F460600208F48410038B755 /* ImagesCollectionViewCell.swift */,
+				2FCD0F99209C61E400FE48F5 /* SelectedImageViewController.swift */,
+			);
+			path = ImagesCollectionView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
