@@ -33,6 +33,7 @@
 		2FCD0F922098469C00FE48F5 /* ThirdPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FCD0F912098469C00FE48F5 /* ThirdPageViewController.swift */; };
 		2FCD0F96209B00A200FE48F5 /* CustomImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FCD0F95209B00A200FE48F5 /* CustomImageView.swift */; };
 		2FCD0F98209B616000FE48F5 /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FCD0F97209B616000FE48F5 /* CustomButton.swift */; };
+		2FCD0F9A209C61E400FE48F5 /* SelectedImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FCD0F99209C61E400FE48F5 /* SelectedImageViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -85,6 +86,7 @@
 		2FCD0F912098469C00FE48F5 /* ThirdPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirdPageViewController.swift; sourceTree = "<group>"; };
 		2FCD0F95209B00A200FE48F5 /* CustomImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomImageView.swift; sourceTree = "<group>"; };
 		2FCD0F97209B616000FE48F5 /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
+		2FCD0F99209C61E400FE48F5 /* SelectedImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectedImageViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -178,6 +180,7 @@
 				2F4605FE208F47EC0038B755 /* CategoriesTableViewCell.swift */,
 				2F460600208F48410038B755 /* ImagesCollectionViewCell.swift */,
 				2F460602209704860038B755 /* CategoryPageViewController.swift */,
+				2FCD0F99209C61E400FE48F5 /* SelectedImageViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -379,6 +382,7 @@
 				2F4605F1208F314D0038B755 /* Observable.swift in Sources */,
 				2F4605F9208F43370038B755 /* Item.swift in Sources */,
 				2F460603209704860038B755 /* CategoryPageViewController.swift in Sources */,
+				2FCD0F9A209C61E400FE48F5 /* SelectedImageViewController.swift in Sources */,
 				2F4605F7208F428B0038B755 /* ItemServices.swift in Sources */,
 				2F4605B6208E4CD80038B755 /* AppDelegate.swift in Sources */,
 				2F4605EA208F275E0038B755 /* Category.swift in Sources */,

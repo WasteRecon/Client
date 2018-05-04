@@ -14,6 +14,7 @@ class ImagesCollectionViewController: UICollectionViewController {
 
     //MARK: Properties
     var images = [Image]()
+    var selectedImage: Image?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -53,17 +54,25 @@ class ImagesCollectionViewController: UICollectionViewController {
 
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as? ImagesCollectionViewCell else {
-            fatalError("what the hell")
+            fatalError("cell cannot be created")
         }
         let image = images[indexPath.row]
 
         cell.imageView.image = image.img
+        cell.selectedImage = image
         // Configure the cell
         return cell
     }
 
     // MARK: UICollectionViewDelegate
-
+    override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        guard let cell = collectionView.cellForItem(at: indexPath) as? ImagesCollectionViewCell else {
+            fatalError("ImagesCollectionVC: cant get cell")
+        }
+        
+        self.selectedImage = cell.selectedImage
+        self.performSegue(withIdentifier: "showImage", sender: nil)
+    }
     /*
     // Uncomment this method to specify if the specified item should be highlighted during tracking
     override func collectionView(_ collectionView: UICollectionView, shouldHighlightItemAt indexPath: IndexPath) -> Bool {
@@ -92,6 +101,17 @@ class ImagesCollectionViewController: UICollectionViewController {
     
     }
     */
+    
+    //MARK: Navigation
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let selectedImage = segue.destination as? SelectedImageViewController else {
+            fatalError("ImagesCollection: cant create selectedImage")
+        }
+        
+        selectedImage.selectedImage = self.selectedImage
+        self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "Images", style: .plain, target: nil, action: nil)
+        self.navigationItem.backBarButtonItem?.tintColor = .white
+    }
     
     //MARK: Private function
     func loadImages(){

@@ -339,10 +339,53 @@
                         </connections>
                     </collectionView>
                     <navigationItem key="navigationItem" title="Images" id="D0m-B1-D7M"/>
+                    <connections>
+                        <segue destination="Zud-i0-MDV" kind="show" identifier="showImage" id="dPi-CI-7mT"/>
+                    </connections>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EAh-mG-Bix" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2140" y="1449"/>
+        </scene>
+        <!--Selected Image-->
+        <scene sceneID="ffg-gp-C5W">
+            <objects>
+                <viewController storyboardIdentifier="Selected Image" title="Selected Image" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Zud-i0-MDV" customClass="SelectedImageViewController" customModule="WasteRecon" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="FF7-AG-Smu">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vPt-5r-gMZ">
+                                <rect key="frame" x="67" y="126" width="240" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dan-aT-pTX">
+                                <rect key="frame" x="166" y="323" width="42" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m7s-Lb-zrh">
+                                <rect key="frame" x="166" y="597" width="42" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <viewLayoutGuide key="safeArea" id="72O-XI-Nep"/>
+                    </view>
+                    <connections>
+                        <outlet property="catNameLabel" destination="m7s-Lb-zrh" id="QUv-Ry-zDe"/>
+                        <outlet property="imageView" destination="vPt-5r-gMZ" id="xLL-nL-ywY"/>
+                        <outlet property="nameLabel" destination="Dan-aT-pTX" id="PJY-eo-928"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="MRN-ZK-aKS" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2134" y="2190"/>
         </scene>
         <!--WasteRecon-->
         <scene sceneID="Ard-l0-Isn">
@@ -455,6 +498,6 @@
         <image name="tabimage" width="32" height="32"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="MjZ-oC-zCA"/>
+        <segue reference="dT2-5u-ALu"/>
     </inferredMetricsTieBreakers>
 </document>
