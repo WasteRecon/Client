@@ -63,13 +63,15 @@ class CategoriesTableViewController: UITableViewController, Observer {
     
     //MARK: Navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        guard let categoryPVC = segue.destination as? CategoryPageViewController else {
-            fatalError("CategoriesTableVC: cant create categoryPVC")
+        if(segue.identifier == "showDetailFromTable"){
+            guard let categoryPVC = segue.destination as? CategoryPageViewController else {
+                fatalError("CategoriesTableVC: cant create categoryPVC")
+            }
+            categoryPVC.catName = self.catName
+            
+            self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "Categories", style: .plain, target: nil, action: nil)
+            self.navigationItem.backBarButtonItem?.tintColor = .white
         }
-        categoryPVC.catName = self.catName
-        
-        self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "Categories", style: .plain, target: nil, action: nil)
-        self.navigationItem.backBarButtonItem?.tintColor = .white
     }
     
     //MARK: Private func

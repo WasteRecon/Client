@@ -109,6 +109,7 @@ class CategoryPageViewController: UIPageViewController, UIPageViewControllerDele
             fatalError("myImgView error")
         }
         myImgView.image = category?.img
+        firstViewController.titleLabel.text = category?.title
         
         myImgView.layer.mask = myImgView.fadeEdge(imageView: myImgView)
     }

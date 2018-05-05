@@ -106,13 +106,15 @@ class ImagesCollectionViewController: UICollectionViewController {
     
     //MARK: Navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        guard let selectedImage = segue.destination as? SelectedImageViewController else {
-            fatalError("ImagesCollection: cant create selectedImage")
+        if(segue.identifier == "showImage"){
+            guard let selectedImage = segue.destination as? SelectedImageViewController else {
+                fatalError("ImagesCollection: cant create selectedImage")
+            }
+            
+            selectedImage.selectedImage = self.selectedImage
+            self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "Images", style: .plain, target: nil, action: nil)
+            self.navigationItem.backBarButtonItem?.tintColor = .white
         }
-        
-        selectedImage.selectedImage = self.selectedImage
-        self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "Images", style: .plain, target: nil, action: nil)
-        self.navigationItem.backBarButtonItem?.tintColor = .white
     }
     
     //MARK: Private function

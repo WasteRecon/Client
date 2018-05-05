@@ -132,13 +132,15 @@ class NewImageViewController: UIViewController, UIImagePickerControllerDelegate,
     
     //MARK: Navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        guard let categoryPageVC =  segue.destination as? CategoryPageViewController else{
-            print("NewImageVC: cant create categoryPageVC")
-            return
+        if(segue.identifier == "showDetail"){
+            guard let categoryPageVC =  segue.destination as? CategoryPageViewController else{
+                print("NewImageVC: cant create categoryPageVC")
+                return
+            }
+            categoryPageVC.catName = itemService.catName
+            self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "New Image", style: .plain, target: nil, action: nil)
+            self.navigationItem.backBarButtonItem?.tintColor = .white
         }
-        categoryPageVC.catName = itemService.catName
-        self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "New Image", style: .plain, target: nil, action: nil)
-        self.navigationItem.backBarButtonItem?.tintColor = .white
     }
     
 }
