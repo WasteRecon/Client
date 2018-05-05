@@ -95,7 +95,7 @@ class CategoryServices: Observable {
         }
     }
     
-    //MARK: Observer func
+    //MARK: Observer
     func register(newObserver: Observer) {
         if observers.index(where: {($0 as AnyObject) === (newObserver as AnyObject)}) == nil {
             observers.append(newObserver)

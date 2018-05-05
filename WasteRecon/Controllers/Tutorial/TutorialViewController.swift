@@ -16,6 +16,7 @@ class TutorialViewController: UIPageViewController, UIPageViewControllerDelegate
                 self.getViewController(name: "ImagesTutor")]
     }()
 
+    //MARK: Initializers
     override func viewDidLoad() {
         super.viewDidLoad()
         dataSource = self
@@ -27,10 +28,10 @@ class TutorialViewController: UIPageViewController, UIPageViewControllerDelegate
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
     
     //MARK: Datasource
+    //Set page order forward
     func pageViewController(_ pageViewController: UIPageViewController, viewControllerBefore viewController: UIViewController) -> UIViewController? {
         guard let viewControllerIndex = tutorialVC.index(of: viewController) else {
             return nil
@@ -47,7 +48,7 @@ class TutorialViewController: UIPageViewController, UIPageViewControllerDelegate
         
         return tutorialVC[previousIndex]
     }
-    
+    //Set page order backward
     func pageViewController(_ pageViewController: UIPageViewController, viewControllerAfter viewController: UIViewController) -> UIViewController? {
         guard let viewControllerIndex = tutorialVC.index(of: viewController) else {
             return nil
@@ -81,19 +82,8 @@ class TutorialViewController: UIPageViewController, UIPageViewControllerDelegate
     }
     
     //MARK: Private Method
+    //Get viewController with name
     private func getViewController(name: String) -> UIViewController {
         return UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier:"\(name)")
     }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }

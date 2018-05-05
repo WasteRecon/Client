@@ -15,22 +15,22 @@ class CategoriesTableViewController: UITableViewController, Observer {
     let categoriesService = CategoryServices()
     var categories = [Category]()
     var catName: String!
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         categoriesService.register(newObserver: self)
         loadCategories()
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
-
-    // MARK: - Table view data source
+    
+    // MARK: TableView Datasource
     override func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
-
+    
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return categories.count
     }
@@ -46,6 +46,7 @@ class CategoriesTableViewController: UITableViewController, Observer {
         cell.colorImage.image = category.img
         cell.catName = category.catName
         
+        //Customize cell
         cell.cellCustom.layer.cornerRadius = cell.cellCustom.frame.height / 5
         cell.colorImage.setImageAndShadow(image: cell.colorImage.image!, myView: view, radius: 7)
         
@@ -69,8 +70,10 @@ class CategoriesTableViewController: UITableViewController, Observer {
             }
             categoryPVC.catName = self.catName
         }
-            self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "Categories", style: .plain, target: nil, action: nil)
-            self.navigationItem.backBarButtonItem?.tintColor = .white
+        
+        //Customize back button
+        self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "Categories", style: .plain, target: nil, action: nil)
+        self.navigationItem.backBarButtonItem?.tintColor = .white
         
     }
     
@@ -83,8 +86,8 @@ class CategoriesTableViewController: UITableViewController, Observer {
         categories = categoriesService.categories
         self.tableView.reloadData()
     }
-
     
     
-
+    
+    
 }

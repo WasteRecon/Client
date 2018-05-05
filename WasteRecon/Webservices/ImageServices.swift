@@ -12,12 +12,10 @@ class ImageServices{
     static let globalImages = ImageServices()
     
     //MARK: Properties
-    var observers = [Observer]()
     var images = [Image]()
     
     //MARK: Get All Images
     func getAllImages() -> [Image]{
-        //ImageServices.globalImages.notifyObservers()
         return images
     }
     
@@ -37,7 +35,6 @@ class ImageServices{
     //MARK: Post new image
     func addImageToServer(newImage: Image, complete: @escaping (Bool) -> Void) {
         images.append(newImage)
-        //notifyObservers()
         complete(true)
     }
 }

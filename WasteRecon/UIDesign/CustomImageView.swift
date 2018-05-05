@@ -14,6 +14,7 @@ class CustomImageView: UIImageView {
         
     }
     
+    //Smoothen the edges (round)
     func setImageAndShadow(image: UIImage, myView : UIView, radius: CGFloat) {
         self.image = image
         self.superview?.layoutIfNeeded()
@@ -22,6 +23,7 @@ class CustomImageView: UIImageView {
         layer.cornerRadius = self.frame.height / radius
     }
     
+    //Fade the edges
     func fadeEdge(imageView: CustomImageView) -> CAGradientLayer{
         let maskLayer = CAGradientLayer()
         maskLayer.frame = imageView.bounds

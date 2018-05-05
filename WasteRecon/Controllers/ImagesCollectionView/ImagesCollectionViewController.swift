@@ -16,31 +16,20 @@ class ImagesCollectionViewController: UICollectionViewController {
     var images = [Image]()
     var selectedImage: Image?
     
+    //MARK: Init
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         loadImages()
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
     
     override func viewWillAppear(_ animated: Bool) {
         loadImages()
         self.collectionView!.reloadData()
     }
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using [segue destinationViewController].
-        // Pass the selected object to the new view controller.
-    }
-    */
 
     // MARK: UICollectionViewDataSource
     override func numberOfSections(in collectionView: UICollectionView) -> Int {
@@ -49,7 +38,6 @@ class ImagesCollectionViewController: UICollectionViewController {
 
 
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of items
         return images.count
     }
 
@@ -62,7 +50,6 @@ class ImagesCollectionViewController: UICollectionViewController {
         cell.imageView.image = image.img
         cell.imageView.setImageAndShadow(image: cell.imageView.image!, myView: view, radius: 10)
         cell.selectedImage = image
-        // Configure the cell
         return cell
     }
 
@@ -75,34 +62,6 @@ class ImagesCollectionViewController: UICollectionViewController {
         self.selectedImage = cell.selectedImage
         self.performSegue(withIdentifier: "showImage", sender: nil)
     }
-    /*
-    // Uncomment this method to specify if the specified item should be highlighted during tracking
-    override func collectionView(_ collectionView: UICollectionView, shouldHighlightItemAt indexPath: IndexPath) -> Bool {
-        return true
-    }
-    */
-
-    /*
-    // Uncomment this method to specify if the specified item should be selected
-    override func collectionView(_ collectionView: UICollectionView, shouldSelectItemAt indexPath: IndexPath) -> Bool {
-        return true
-    }
-    */
-
-    /*
-    // Uncomment these methods to specify if an action menu should be displayed for the specified item, and react to actions performed on the item
-    override func collectionView(_ collectionView: UICollectionView, shouldShowMenuForItemAt indexPath: IndexPath) -> Bool {
-        return false
-    }
-
-    override func collectionView(_ collectionView: UICollectionView, canPerformAction action: Selector, forItemAt indexPath: IndexPath, withSender sender: Any?) -> Bool {
-        return false
-    }
-
-    override func collectionView(_ collectionView: UICollectionView, performAction action: Selector, forItemAt indexPath: IndexPath, withSender sender: Any?) {
-    
-    }
-    */
     
     //MARK: Navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -113,6 +72,8 @@ class ImagesCollectionViewController: UICollectionViewController {
             
             selectedImage.selectedImage = self.selectedImage
         }
+        
+        //Customize back button
         self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "Images", style: .plain, target: nil, action: nil)
         self.navigationItem.backBarButtonItem?.tintColor = .white
 
@@ -121,7 +82,6 @@ class ImagesCollectionViewController: UICollectionViewController {
     //MARK: Private function
     func loadImages(){
         images = ImageServices.globalImages.getAllImages()
-        //print(images[0].name)
     }
     
 
