@@ -68,10 +68,10 @@ class CategoriesTableViewController: UITableViewController, Observer {
                 fatalError("CategoriesTableVC: cant create categoryPVC")
             }
             categoryPVC.catName = self.catName
-            
+        }
             self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "Categories", style: .plain, target: nil, action: nil)
             self.navigationItem.backBarButtonItem?.tintColor = .white
-        }
+        
     }
     
     //MARK: Private func

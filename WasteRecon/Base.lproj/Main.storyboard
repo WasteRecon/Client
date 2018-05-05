@@ -22,7 +22,7 @@
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="yhb-Ru-tM3">
                                 <rect key="frame" x="8" y="96" width="359" height="523"/>
                                 <subviews>
-                                    <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" placeholderIntrinsicWidth="240" placeholderIntrinsicHeight="240" image="default" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="iQ0-VG-Vm2" customClass="CustomImageView" customModule="WasteRecon" customModuleProvider="target">
+                                    <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" placeholderIntrinsicWidth="240" placeholderIntrinsicHeight="240" image="GlassBottle" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="iQ0-VG-Vm2" customClass="CustomImageView" customModule="WasteRecon" customModuleProvider="target">
                                         <rect key="frame" x="16" y="0.0" width="327" height="327"/>
                                         <color key="backgroundColor" red="0.96470540761947632" green="0.96082860231399536" blue="0.96062332391738892" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <color key="tintColor" red="0.96470540760000001" green="0.9608286023" blue="0.96062332390000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -353,21 +353,21 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="0.19628295302391052" green="0.18381026387214661" blue="0.20859494805335999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="15" minimumInteritemSpacing="10" id="Ukl-CR-tgL">
-                            <size key="itemSize" width="200" height="200"/>
+                            <size key="itemSize" width="180" height="180"/>
                             <size key="headerReferenceSize" width="0.0" height="0.0"/>
                             <size key="footerReferenceSize" width="0.0" height="0.0"/>
                             <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                         </collectionViewFlowLayout>
                         <cells>
                             <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="ImageCell" id="guS-NB-f6E" customClass="ImagesCollectionViewCell" customModule="WasteRecon" customModuleProvider="target">
-                                <rect key="frame" x="87.666666666666671" y="0.0" width="200" height="200"/>
+                                <rect key="frame" x="0.0" y="0.0" width="180" height="180"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
-                                    <rect key="frame" x="0.0" y="0.0" width="200" height="200"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="180" height="180"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Image" translatesAutoresizingMaskIntoConstraints="NO" id="JxE-O6-eby" customClass="CustomImageView" customModule="WasteRecon" customModuleProvider="target">
-                                            <rect key="frame" x="0.0" y="0.0" width="200" height="200"/>
+                                        <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="default" translatesAutoresizingMaskIntoConstraints="NO" id="JxE-O6-eby" customClass="CustomImageView" customModule="WasteRecon" customModuleProvider="target">
+                                            <rect key="frame" x="0.0" y="0.0" width="180" height="180"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" secondItem="JxE-O6-eby" secondAttribute="height" multiplier="1:1" id="z6C-bN-cYW"/>
                                             </constraints>
@@ -463,37 +463,136 @@
             </objects>
             <point key="canvasLocation" x="2133.5999999999999" y="2189.9550224887557"/>
         </scene>
-        <!--Page View Controller-->
+        <!--Tutorial View Controller-->
         <scene sceneID="11H-Jf-FDJ">
             <objects>
-                <pageViewController autoresizesArchivedViewToFullSize="NO" transitionStyle="pageCurl" navigationOrientation="horizontal" spineLocation="min" id="6Ip-2c-VxF" sceneMemberID="viewController"/>
+                <pageViewController autoresizesArchivedViewToFullSize="NO" transitionStyle="scroll" navigationOrientation="horizontal" spineLocation="none" id="6Ip-2c-VxF" customClass="TutorialViewController" customModule="WasteRecon" customModuleProvider="target" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mN9-Ud-A5k" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="4233" y="2286"/>
         </scene>
-        <!--View Controller-->
+        <!--NewImgTutor-->
         <scene sceneID="hPa-or-57G">
             <objects>
-                <viewController id="n64-sC-MAg" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="NewImgTutor" title="NewImgTutor" useStoryboardIdentifierAsRestorationIdentifier="YES" id="n64-sC-MAg" customClass="NewImgTutor" customModule="WasteRecon" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="iwS-Ho-1fN">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="NewImageScreen" translatesAutoresizingMaskIntoConstraints="NO" id="QwU-Ql-u6x">
+                                <rect key="frame" x="40" y="193.99999999999994" width="295" height="638.66666666666652"/>
+                                <color key="backgroundColor" red="0.034803688530000002" green="0.031699389219999999" blue="0.031648315490000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="QwU-Ql-u6x" secondAttribute="height" multiplier="1125:2436" id="dJz-Ja-JwF"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Xp-r1-nfQ">
+                                <rect key="frame" x="30" y="84" width="315" height="77"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="Analyse your item by taking a picture.">
+                                        <attributes>
+                                            <color key="NSColor" red="0.96470540760000001" green="0.9608286023" blue="0.96062332390000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <font key="NSFont" size="24" name="Noteworthy-Bold"/>
+                                            <font key="NSOriginalFont" size="24" name="Noteworthy-Bold"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" red="0.034803688530000002" green="0.031699389219999999" blue="0.031648315490000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="6Xp-r1-nfQ" firstAttribute="leading" secondItem="pHb-m5-dRX" secondAttribute="leading" constant="30" id="1yW-uH-Xo3"/>
+                            <constraint firstItem="QwU-Ql-u6x" firstAttribute="leading" secondItem="pHb-m5-dRX" secondAttribute="leading" constant="40" id="8c9-3b-LvX"/>
+                            <constraint firstItem="pHb-m5-dRX" firstAttribute="trailing" secondItem="QwU-Ql-u6x" secondAttribute="trailing" constant="40" id="BvP-uz-FQQ"/>
+                            <constraint firstItem="6Xp-r1-nfQ" firstAttribute="top" secondItem="pHb-m5-dRX" secondAttribute="top" constant="40" id="Mun-he-ajP"/>
+                            <constraint firstItem="pHb-m5-dRX" firstAttribute="trailing" secondItem="6Xp-r1-nfQ" secondAttribute="trailing" constant="30" id="Rlc-Qk-lGb"/>
+                            <constraint firstItem="QwU-Ql-u6x" firstAttribute="top" secondItem="pHb-m5-dRX" secondAttribute="top" constant="150" id="V7Q-zy-YyY"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="pHb-m5-dRX"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RZn-ym-EfE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5430" y="1569"/>
+            <point key="canvasLocation" x="5429.6000000000004" y="1568.7192118226601"/>
         </scene>
-        <!--View Controller-->
+        <!--CategoriesTutor-->
         <scene sceneID="KNz-Xm-J7r">
             <objects>
-                <viewController id="5qf-em-ahT" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="CategoriesTutor" title="CategoriesTutor" useStoryboardIdentifierAsRestorationIdentifier="YES" id="5qf-em-ahT" customClass="CategoriesTutor" customModule="WasteRecon" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="rq7-Oy-CAc">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="CategoriesScreen" translatesAutoresizingMaskIntoConstraints="NO" id="b0g-m9-mCg">
+                                <rect key="frame" x="40" y="193.99999999999994" width="295" height="638.66666666666652"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="b0g-m9-mCg" secondAttribute="height" multiplier="1125:2436" id="nYr-h5-Xt7"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jnI-Vb-Rvj">
+                                <rect key="frame" x="30" y="84" width="315" height="38.666666666666657"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="Read about a dozen of different recycling categories">
+                                        <attributes>
+                                            <color key="NSColor" red="0.96470999999999996" green="0.96082999999999996" blue="0.96062000000000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <font key="NSFont" size="24" name="Noteworthy-Bold"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
+                                                <tabStops>
+                                                    <textTab alignment="left" location="28">
+                                                        <options/>
+                                                    </textTab>
+                                                    <textTab alignment="left" location="56">
+                                                        <options/>
+                                                    </textTab>
+                                                    <textTab alignment="left" location="84">
+                                                        <options/>
+                                                    </textTab>
+                                                    <textTab alignment="left" location="112">
+                                                        <options/>
+                                                    </textTab>
+                                                    <textTab alignment="left" location="140">
+                                                        <options/>
+                                                    </textTab>
+                                                    <textTab alignment="left" location="168">
+                                                        <options/>
+                                                    </textTab>
+                                                    <textTab alignment="left" location="196">
+                                                        <options/>
+                                                    </textTab>
+                                                    <textTab alignment="left" location="224">
+                                                        <options/>
+                                                    </textTab>
+                                                    <textTab alignment="left" location="252">
+                                                        <options/>
+                                                    </textTab>
+                                                    <textTab alignment="left" location="280">
+                                                        <options/>
+                                                    </textTab>
+                                                    <textTab alignment="left" location="308">
+                                                        <options/>
+                                                    </textTab>
+                                                    <textTab alignment="left" location="336">
+                                                        <options/>
+                                                    </textTab>
+                                                </tabStops>
+                                            </paragraphStyle>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" red="0.034803688530000002" green="0.031699389219999999" blue="0.031648315490000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="jnI-Vb-Rvj" firstAttribute="top" secondItem="bsO-rN-VZ6" secondAttribute="top" constant="40" id="BdQ-go-2Z7"/>
+                            <constraint firstItem="b0g-m9-mCg" firstAttribute="leading" secondItem="bsO-rN-VZ6" secondAttribute="leading" constant="40" id="DS4-a9-Zf0"/>
+                            <constraint firstItem="bsO-rN-VZ6" firstAttribute="trailing" secondItem="jnI-Vb-Rvj" secondAttribute="trailing" constant="30" id="lFg-3r-3pa"/>
+                            <constraint firstItem="jnI-Vb-Rvj" firstAttribute="leading" secondItem="bsO-rN-VZ6" secondAttribute="leading" constant="30" id="t9f-HW-q9u"/>
+                            <constraint firstItem="b0g-m9-mCg" firstAttribute="top" secondItem="bsO-rN-VZ6" secondAttribute="top" constant="150" id="yFA-Pr-VK8"/>
+                            <constraint firstItem="bsO-rN-VZ6" firstAttribute="trailing" secondItem="b0g-m9-mCg" secondAttribute="trailing" constant="40" id="z64-Yi-Of0"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="bsO-rN-VZ6"/>
                     </view>
                 </viewController>
@@ -501,14 +600,82 @@
             </objects>
             <point key="canvasLocation" x="5431" y="2285"/>
         </scene>
-        <!--View Controller-->
+        <!--ImagesTutor-->
         <scene sceneID="VaO-c3-NNk">
             <objects>
-                <viewController id="fpS-yc-4NW" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ImagesTutor" title="ImagesTutor" useStoryboardIdentifierAsRestorationIdentifier="YES" id="fpS-yc-4NW" customClass="ImagesTutor" customModule="WasteRecon" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="0eV-pq-PTB">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ImagesScreen" translatesAutoresizingMaskIntoConstraints="NO" id="1a4-aY-iNJ">
+                                <rect key="frame" x="40" y="193.99999999999994" width="295" height="638.66666666666652"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="1a4-aY-iNJ" secondAttribute="height" multiplier="1125:2436" id="d2a-d6-O48"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NhF-VN-1mw">
+                                <rect key="frame" x="30" y="74" width="315" height="115.33333333333331"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="Look up your history by browsing through an intuitive list">
+                                        <attributes>
+                                            <color key="NSColor" red="0.96470999999999996" green="0.96082999999999996" blue="0.96062000000000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <font key="NSFont" size="24" name="Noteworthy-Bold"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
+                                                <tabStops>
+                                                    <textTab alignment="left" location="28">
+                                                        <options/>
+                                                    </textTab>
+                                                    <textTab alignment="left" location="56">
+                                                        <options/>
+                                                    </textTab>
+                                                    <textTab alignment="left" location="84">
+                                                        <options/>
+                                                    </textTab>
+                                                    <textTab alignment="left" location="112">
+                                                        <options/>
+                                                    </textTab>
+                                                    <textTab alignment="left" location="140">
+                                                        <options/>
+                                                    </textTab>
+                                                    <textTab alignment="left" location="168">
+                                                        <options/>
+                                                    </textTab>
+                                                    <textTab alignment="left" location="196">
+                                                        <options/>
+                                                    </textTab>
+                                                    <textTab alignment="left" location="224">
+                                                        <options/>
+                                                    </textTab>
+                                                    <textTab alignment="left" location="252">
+                                                        <options/>
+                                                    </textTab>
+                                                    <textTab alignment="left" location="280">
+                                                        <options/>
+                                                    </textTab>
+                                                    <textTab alignment="left" location="308">
+                                                        <options/>
+                                                    </textTab>
+                                                    <textTab alignment="left" location="336">
+                                                        <options/>
+                                                    </textTab>
+                                                </tabStops>
+                                            </paragraphStyle>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" red="0.034803688530000002" green="0.031699389219999999" blue="0.031648315490000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="NhF-VN-1mw" firstAttribute="top" secondItem="nbS-kD-FGB" secondAttribute="top" constant="30" id="5F0-al-YkQ"/>
+                            <constraint firstItem="1a4-aY-iNJ" firstAttribute="top" secondItem="nbS-kD-FGB" secondAttribute="top" constant="150" id="8qG-bE-vMW"/>
+                            <constraint firstItem="nbS-kD-FGB" firstAttribute="trailing" secondItem="1a4-aY-iNJ" secondAttribute="trailing" constant="40" id="O2b-ye-0np"/>
+                            <constraint firstItem="nbS-kD-FGB" firstAttribute="trailing" secondItem="NhF-VN-1mw" secondAttribute="trailing" constant="30" id="ev0-4E-eI4"/>
+                            <constraint firstItem="1a4-aY-iNJ" firstAttribute="leading" secondItem="nbS-kD-FGB" secondAttribute="leading" constant="40" id="uSI-hu-ODM"/>
+                            <constraint firstItem="NhF-VN-1mw" firstAttribute="leading" secondItem="nbS-kD-FGB" secondAttribute="leading" constant="30" id="xuq-6y-xWO"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="nbS-kD-FGB"/>
                     </view>
                 </viewController>
@@ -622,9 +789,13 @@
         </scene>
     </scenes>
     <resources>
+        <image name="CategoriesScreen" width="1125" height="2436"/>
+        <image name="GlassBottle" width="300" height="300"/>
         <image name="Image" width="540" height="540"/>
+        <image name="ImagesScreen" width="1125" height="2436"/>
         <image name="InfoImage" width="256" height="256"/>
         <image name="LightBulb" width="256" height="256"/>
+        <image name="NewImageScreen" width="562" height="1218"/>
         <image name="QuestionMark" width="32" height="32"/>
         <image name="RightArrow" width="64" height="64"/>
         <image name="category" width="32" height="32"/>

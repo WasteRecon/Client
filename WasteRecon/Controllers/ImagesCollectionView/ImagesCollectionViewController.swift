@@ -112,9 +112,10 @@ class ImagesCollectionViewController: UICollectionViewController {
             }
             
             selectedImage.selectedImage = self.selectedImage
-            self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "Images", style: .plain, target: nil, action: nil)
-            self.navigationItem.backBarButtonItem?.tintColor = .white
         }
+        self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "Images", style: .plain, target: nil, action: nil)
+        self.navigationItem.backBarButtonItem?.tintColor = .white
+
     }
     
     //MARK: Private function

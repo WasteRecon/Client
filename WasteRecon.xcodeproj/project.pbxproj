@@ -28,6 +28,10 @@
 		2F4605FF208F47EC0038B755 /* CategoriesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F4605FE208F47EC0038B755 /* CategoriesTableViewCell.swift */; };
 		2F460601208F48410038B755 /* ImagesCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F460600208F48410038B755 /* ImagesCollectionViewCell.swift */; };
 		2F460603209704860038B755 /* CategoryPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F460602209704860038B755 /* CategoryPageViewController.swift */; };
+		2F80A857209E6263000219E3 /* TutorialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F80A856209E6263000219E3 /* TutorialViewController.swift */; };
+		2F80A85A209E65E7000219E3 /* NewImgTutor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F80A859209E65E7000219E3 /* NewImgTutor.swift */; };
+		2F80A85C209E65F7000219E3 /* CategoriesTutor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F80A85B209E65F7000219E3 /* CategoriesTutor.swift */; };
+		2F80A85E209E6605000219E3 /* ImagesTutor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F80A85D209E6605000219E3 /* ImagesTutor.swift */; };
 		2FCD0F8E2097874100FE48F5 /* FirstPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FCD0F8D2097874100FE48F5 /* FirstPageViewController.swift */; };
 		2FCD0F902098468D00FE48F5 /* SecondPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FCD0F8F2098468D00FE48F5 /* SecondPageViewController.swift */; };
 		2FCD0F922098469C00FE48F5 /* ThirdPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FCD0F912098469C00FE48F5 /* ThirdPageViewController.swift */; };
@@ -81,6 +85,10 @@
 		2F4605FE208F47EC0038B755 /* CategoriesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesTableViewCell.swift; sourceTree = "<group>"; };
 		2F460600208F48410038B755 /* ImagesCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagesCollectionViewCell.swift; sourceTree = "<group>"; };
 		2F460602209704860038B755 /* CategoryPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryPageViewController.swift; sourceTree = "<group>"; };
+		2F80A856209E6263000219E3 /* TutorialViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorialViewController.swift; sourceTree = "<group>"; };
+		2F80A859209E65E7000219E3 /* NewImgTutor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewImgTutor.swift; sourceTree = "<group>"; };
+		2F80A85B209E65F7000219E3 /* CategoriesTutor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesTutor.swift; sourceTree = "<group>"; };
+		2F80A85D209E6605000219E3 /* ImagesTutor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagesTutor.swift; sourceTree = "<group>"; };
 		2FCD0F8D2097874100FE48F5 /* FirstPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstPageViewController.swift; sourceTree = "<group>"; };
 		2FCD0F8F2098468D00FE48F5 /* SecondPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondPageViewController.swift; sourceTree = "<group>"; };
 		2FCD0F912098469C00FE48F5 /* ThirdPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirdPageViewController.swift; sourceTree = "<group>"; };
@@ -173,6 +181,7 @@
 		2F4605E6208F26370038B755 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				2F80A858209E65AF000219E3 /* Tutorial */,
 				2FCD0F9C209C6B4000FE48F5 /* ImagesCollectionView */,
 				2FCD0F9B209C6B2600FE48F5 /* CategoriesTableView */,
 				2FCD0F8A209786B700FE48F5 /* CategoryPageVC */,
@@ -208,6 +217,17 @@
 				2F4605F0208F314D0038B755 /* Observable.swift */,
 			);
 			path = Protocols;
+			sourceTree = "<group>";
+		};
+		2F80A858209E65AF000219E3 /* Tutorial */ = {
+			isa = PBXGroup;
+			children = (
+				2F80A856209E6263000219E3 /* TutorialViewController.swift */,
+				2F80A859209E65E7000219E3 /* NewImgTutor.swift */,
+				2F80A85B209E65F7000219E3 /* CategoriesTutor.swift */,
+				2F80A85D209E6605000219E3 /* ImagesTutor.swift */,
+			);
+			path = Tutorial;
 			sourceTree = "<group>";
 		};
 		2FCD0F8A209786B700FE48F5 /* CategoryPageVC */ = {
@@ -389,16 +409,20 @@
 				2FCD0F902098468D00FE48F5 /* SecondPageViewController.swift in Sources */,
 				2F4605F5208F39E40038B755 /* ImageServices.swift in Sources */,
 				2F4605FB208F47A20038B755 /* CategoriesTableViewController.swift in Sources */,
+				2F80A85C209E65F7000219E3 /* CategoriesTutor.swift in Sources */,
 				2F4605FF208F47EC0038B755 /* CategoriesTableViewCell.swift in Sources */,
 				2F4605B8208E4CD80038B755 /* NewImageViewController.swift in Sources */,
 				2F4605F3208F31EC0038B755 /* CategoryServices.swift in Sources */,
 				2FCD0F96209B00A200FE48F5 /* CustomImageView.swift in Sources */,
 				2FCD0F922098469C00FE48F5 /* ThirdPageViewController.swift in Sources */,
+				2F80A857209E6263000219E3 /* TutorialViewController.swift in Sources */,
 				2FCD0F98209B616000FE48F5 /* CustomButton.swift in Sources */,
 				2F4605F1208F314D0038B755 /* Observable.swift in Sources */,
 				2F4605F9208F43370038B755 /* Item.swift in Sources */,
 				2F460603209704860038B755 /* CategoryPageViewController.swift in Sources */,
 				2FCD0F9A209C61E400FE48F5 /* SelectedImageViewController.swift in Sources */,
+				2F80A85E209E6605000219E3 /* ImagesTutor.swift in Sources */,
+				2F80A85A209E65E7000219E3 /* NewImgTutor.swift in Sources */,
 				2F4605F7208F428B0038B755 /* ItemServices.swift in Sources */,
 				2F4605B6208E4CD80038B755 /* AppDelegate.swift in Sources */,
 				2F4605EA208F275E0038B755 /* Category.swift in Sources */,

@@ -34,7 +34,7 @@ class NewImageViewController: UIViewController, UIImagePickerControllerDelegate,
         mat = materials[2]
         imageView.setImageAndShadow(image: imageView.image!, myView: view, radius: 13)
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
@@ -63,7 +63,7 @@ class NewImageViewController: UIViewController, UIImagePickerControllerDelegate,
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
         return string.rangeOfCharacter(from: NSCharacterSet.letters.inverted) == nil
     }
-
+    
     //MARK: UITapGestureRecognizer
     @IBAction func selectImageFromLibrary(_ sender: UITapGestureRecognizer) {
         shape.resignFirstResponder()
@@ -138,9 +138,9 @@ class NewImageViewController: UIViewController, UIImagePickerControllerDelegate,
                 return
             }
             categoryPageVC.catName = itemService.catName
-            self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "New Image", style: .plain, target: nil, action: nil)
-            self.navigationItem.backBarButtonItem?.tintColor = .white
         }
+        self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "New Image", style: .plain, target: nil, action: nil)
+        self.navigationItem.backBarButtonItem?.tintColor = .white
     }
     
 }
